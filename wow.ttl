@@ -27,12 +27,23 @@
               rdfs:range :PowerType .
 
 
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#hasTrait
+:hasTrait rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isTraitOf ;
+          rdfs:domain :Race ;
+          rdfs:range :Trait .
+
+
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#isFactionOf
 :isFactionOf rdf:type owl:ObjectProperty .
 
 
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#isPowerTypeOf
 :isPowerTypeOf rdf:type owl:ObjectProperty .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#isTraitOf
+:isTraitOf rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -88,6 +99,15 @@
 
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#Race
 :Race rdf:type owl:Class .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#Spell
+:Spell rdf:type owl:Class .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#Trait
+:Trait rdf:type owl:Class ;
+       rdfs:subClassOf :Spell .
 
 
 #################################################################
