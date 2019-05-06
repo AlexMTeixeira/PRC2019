@@ -1,0 +1,249 @@
+@prefix : <http://prc.di.uminho.pt/2019/worldOfwarcraft#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://prc.di.uminho.pt/2019/worldOfwarcraft> .
+
+<http://prc.di.uminho.pt/2019/worldOfwarcraft> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#hasFaction
+:hasFaction rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            owl:inverseOf :isFactionOf ;
+            rdfs:domain :Race ;
+            rdfs:range :Faction .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#hasPowerType
+:hasPowerType rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isPowerTypeOf ;
+              rdfs:domain :Class ;
+              rdfs:range :PowerType .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#isFactionOf
+:isFactionOf rdf:type owl:ObjectProperty .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#isPowerTypeOf
+:isPowerTypeOf rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#id
+:id rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Class ,
+                :Race ;
+    rdfs:range xsd:int .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Class ,
+                  :Faction ,
+                  :Race ;
+      rdfs:range xsd:string .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#typeName
+:typeName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :PowerType ;
+          rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#Alliance
+:Alliance rdf:type owl:Class ;
+          rdfs:subClassOf :Faction .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#Class
+:Class rdf:type owl:Class .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#Faction
+:Faction rdf:type owl:Class .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#Horde
+:Horde rdf:type owl:Class ;
+       rdfs:subClassOf :Faction .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#PowerType
+:PowerType rdf:type owl:Class .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#Race
+:Race rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#alliance
+:alliance rdf:type owl:NamedIndividual ,
+                   :Alliance ;
+          :name "Alliance" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c1
+:c1 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :rage ;
+    :id 1 ;
+    :name "Warrior" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c10
+:c10 rdf:type owl:NamedIndividual ,
+              :Class ;
+     :hasPowerType :energy ;
+     :id 10 ;
+     :name "Monk" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c11
+:c11 rdf:type owl:NamedIndividual ,
+              :Class ;
+     :hasPowerType :energy ,
+                   :focus ,
+                   :mana ;
+     :id 11 ;
+     :name "Druid" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c12
+:c12 rdf:type owl:NamedIndividual ,
+              :Class ;
+     :hasPowerType :fury ;
+     :id 12 ;
+     :name "Demon Hunter" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c2
+:c2 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :mana ;
+    :id 2 ;
+    :name "Paladin" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c3
+:c3 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :focus ;
+    :id 3 ;
+    :name "Hunter" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c4
+:c4 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :energy ;
+    :id 4 ;
+    :name "Rogue" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c5
+:c5 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :mana ;
+    :id 5 ;
+    :name "Priest" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c6
+:c6 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :runic-power ;
+    :id 6 ;
+    :name "Death Knight" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c7
+:c7 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :mana ;
+    :id 7 ;
+    :name "Shaman" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c8
+:c8 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :mana ;
+    :id 8 ;
+    :name "Mage" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c9
+:c9 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :mana ;
+    :id 9 ;
+    :name "Warlock" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#energy
+:energy rdf:type owl:NamedIndividual ,
+                 :PowerType ;
+        :typeName "Energy" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#focus
+:focus rdf:type owl:NamedIndividual ,
+                :PowerType ;
+       :typeName "Focus" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#fury
+:fury rdf:type owl:NamedIndividual ,
+               :PowerType ;
+      :typeName "Fury" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#horde
+:horde rdf:type owl:NamedIndividual ,
+                :Horde ;
+       :name "Horde" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#mana
+:mana rdf:type owl:NamedIndividual ,
+               :PowerType ;
+      :typeName "Mana" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#neutral
+:neutral rdf:type owl:NamedIndividual ,
+                  :Faction ;
+         :name "Neutral" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#rage
+:rage rdf:type owl:NamedIndividual ,
+               :PowerType ;
+      :typeName "Rage" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#runic-power
+:runic-power rdf:type owl:NamedIndividual ,
+                      :PowerType ;
+             :typeName "Runic Power" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

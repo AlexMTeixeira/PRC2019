@@ -1,0 +1,789 @@
+{
+  "races": [
+    {
+      "id": 1,
+      "mask": 1,
+      "side": "alliance",
+      "name": "Human",
+      "classes": ["Death Knight",
+        "Hunter",
+        "Rogue",
+        "Monk",
+        "Mage",
+        "Warlock",
+        "Priest",
+        "Paladin",
+        "Warrior"],
+			"traits": [
+        {
+          "name": "Every Man for Himself",
+          "description": "Humans can shake off debilitating stun effects."
+        },
+        {
+          "name": "Diplomacy",
+          "description": "The straightforward and outspoken humans tend to get along well with other races and gain their trust with relative ease."
+        },
+        {
+          "name": "The Human Spirit",
+          "description": "Humans are very adaptable, and get additional bonuses to all secondary stats from all sources."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "mask": 2,
+      "side": "horde",
+      "name": "Orc",
+      "classes": [
+        "Death Knight",
+        "Monk",
+        "Hunter",
+        "Mage",
+        "Rogue",
+        "Warlock",
+        "Shaman",
+        "Warrior"],
+			"traits": [
+        {
+          "name": "Blood Fury",
+          "description": "Orcs can fly into a rage that increases their attack power or intellect (based on class) for a short time."
+        },
+        {
+          "name": "Hardiness",
+          "description": "Rugged by nature, orcs recover from stun effects more quickly than other races."
+        },
+        {
+          "name": "Command",
+          "description": "Orcs work well with combat pets, which receive a bonus to damage output under their care."
+        }
+      ]
+
+    },
+    {
+      "id": 3,
+      "mask": 4,
+      "side": "alliance",
+      "name": "Dwarf",
+      "classes": [
+        "Death Knight",
+        "Rogue",
+        "Hunter",
+        "Monk",
+        "Mage",
+        "Warlock",
+        "Priest",
+        "Paladin",
+        "Shaman",
+        "Warrior"],
+			"traits": [
+        {
+          "name": "Explorer",
+          "description": "Dwarves receive a skill bonus to archaeology and are able to survey faster than other races."
+        },
+        {
+          "name": "Frost Resistance",
+          "description": "Ironforge dwarves have a natural resistance to Frost magic."
+        },
+        {
+          "name": "Might of the Mountain",
+          "description": "Dwarves battle with powerful intent and gain a bonus to critical strikes."
+        },
+        {
+          "name": "Stoneform",
+          "description": "Dwarves can temporarily turn to living stone, neutralizing ailments and reducing damage taken."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "mask": 8,
+      "side": "alliance",
+      "name": "Night Elf",
+			"classes": [
+        "Demon Hunter",
+        "Death Knight",
+        "Druid",
+        "Rogue",
+        "Hunter",
+        "Monk",
+        "Mage",
+        "Priest",
+        "Warrior"],
+			"traits": [
+        {
+          "name": "Shadowmeld",
+          "description": "Night Elves can slip into the shadows, awaiting for the right moment to strike."
+        },
+        {
+          "name": "Wisp Spirit",
+          "description": "Fallen night elves assume the form of fleet wisp spirits."
+        },
+        {
+          "name": "Nature Resistance",
+          "description": "Night elves can resist Nature magic"
+        },
+        {
+          "name": "Quickness",
+          "description": "The nimble night elves have slightly increased movement speed as well as a minor chance to completely avoid being hit by physical attacks"
+        },
+        {
+          "name": "Touch of Elune",
+          "description": "Night elves gain a unique benefit that changes between day and night time"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "mask": 16,
+      "side": "horde",
+      "name": "Undead",
+			"classes": [
+        "Death Knight",
+        "Hunter",
+        "Mage",
+        "Monk",
+        "Priest",
+        "Rogue",
+        "Warlock",
+        "Warrior"],
+			"traits": [
+        {
+          "name": "Will of the Forsaken",
+          "description": "The Forsaken can shake off any charm, fear and sleep effects at will"
+        },
+        {
+          "name": "Shadow Resistance",
+          "description": "The Forsaken have a natural resistance to Shadow magic"
+        },
+        {
+          "name": "Cannibalize",
+          "description": "One rather grisly means for the Forsaken to replenish their health is by consuming dead bodies"
+        },
+        {
+          "name": "Touch of the Grave",
+          "description": "The Forsaken can sometimes drain the life from their enemies and use it to repair their own bodies"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "mask": 32,
+      "side": "horde",
+      "name": "Tauren",
+			"classes": [
+        "Death Knight",
+        "Hunter",
+        "Druid",
+        "Monk",
+        "Priest",
+        "Paladin",
+        "Shaman",
+        "Warrior"],
+			"traits": [
+        {
+          "name": "Brawn",
+          "description": "Tauren are large, able-bodied warriors and gain a bonus to critical strikes"
+        },
+        {
+          "name": "Cultivation",
+          "description": "Tauren receive a skill bonus to herbalism, and they gather herbs faster than most herbalists"
+        },
+        {
+          "name": "Endurance",
+          "description": "Their exceptional constitution grants the tauren a bonus to their base health"
+        },
+        {
+          "name": "Nature Resistance",
+          "description": "Tauren are resistant to Nature magic"
+        },
+        {
+          "name": "War Stomp",
+          "description": "Shaking the ground with a mighty stomp of their hooves, tauren can briefly stun enemies"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "mask": 64,
+      "side": "alliance",
+      "name": "Gnome",
+			"classes": [
+        "Death Knight",
+        "Hunter",
+        "Monk",
+        "Priest",
+        "Warlock",
+        "Warrior",
+        "Mage",
+        "Rogue"],
+			"traits": [
+        {
+          "name": "Escape Artist",
+          "description": "Gnomes are small and nimble, which allows them to extricate themselves from even the most cunning traps"
+        },
+        {
+          "name": "Arcane Resistance",
+          "description": "Gnomes have a natural resistance to Arcane magic"
+        },
+        {
+          "name": "Expansive Mind",
+          "description": "Curious, creative, and brilliant, gnomes receive a small bonus to their resource pool"
+        },
+        {
+          "name": "Engineering Specialization",
+          "description": "Their expertise with gizmos, gadgets, and gimmicks provides gnomes with a skill bonus to engineering"
+        },
+        {
+          "name": "Nimble Fingers",
+          "description": "Gnomes, while diminutive in stature, are dangerously quick"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "mask": 128,
+      "side": "horde",
+      "name": "Troll",
+			"classes": [
+        "Death Knight",
+        "Monk",
+        "Hunter",
+        "Druid",
+        "Mage",
+        "Priest",
+        "Rogue",
+        "Warlock",
+        "Shaman",
+        "Warrior"],
+			"traits": [
+        {
+          "name": "Berserking",
+          "description": "Trolls can launch themselves into a frenzy, and get increased Haste temporarily"
+        },
+        {
+          "name": "Da Voodoo Shuffle",
+          "description": "Thanks to their impressive legerity, trolls are less affected by movement impairing effects"
+        },
+        {
+          "name": "Regeneration",
+          "description": "Trolls have a natural healing factor that constantly replenishes their health"
+        },
+        {
+          "name": "Beast Slaying",
+          "description": "Trolls hunt with a keen awareness and gain additional experience from killing beasts"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "mask": 256,
+      "side": "horde",
+      "name": "Goblin",
+			"classes": [
+        "Death Knight",
+        "Hunter",
+        "Mage",
+        "Priest",
+        "Rogue",
+        "Warlock",
+        "Shaman",
+        "Warrior"],
+			"traits": [
+        {
+          "name": "Rocket Jump",
+          "description": "Goblins can use their (relatively) trusty rocket belts to launch themselves over short distances"
+        },
+        {
+          "name": "Rocket Barrage",
+          "description": "The rocket belt can also launch rockets at an enemy, causing fire damage to the target"
+        },
+        {
+          "name": "Pack Hobgoblin",
+          "description": "Goblins can access their bank vault from anywhere after earning the help of a trusted friend"
+        },
+        {
+          "name": "Best Deals Anywhere",
+          "description": "Wheeling and dealing is second nature to goblins, and they get discounts from vendors"
+        },
+        {
+          "name": "Time is Money",
+          "description": "Goblins cash in on a bonus to haste"
+        },
+        {
+          "name": "Better Living Through Chemistry",
+          "description": "Goblins have a natural affinity for hazardous materials and receive a bonus to Alchemy"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "mask": 512,
+      "side": "horde",
+      "name": "Blood Elf",
+			"classes": [
+        "Demon Hunter",
+        "Death Knight",
+        "Hunter",
+        "Mage",
+        "Monk",
+        "Paladin",
+        "Priest",
+        "Rogue",
+        "Warlock",
+        "Warrior"],
+			"traits": [
+        {
+          "name": "Arcane Acuity",
+          "description": "Blood elves possess a preternatural talent for precision and gain a bonus to their critical strike chance"
+        },
+        {
+          "name": "Arcane Torrent",
+          "description": "Blood elves can disrupt magic, removing one beneficial effect from enemies around them and restoring some of their own resources"
+        },
+        {
+          "name": "Arcane Affinity",
+          "description": "Blood elves are skilled in the mystical arts and receive a skill bonus to enchanting"
+        },
+        {
+          "name": "Magic Resistance",
+          "description": "Blood elves have a natural resistance to arcane magic spells"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "mask": 1024,
+      "side": "alliance",
+      "name": "Draenei",
+			"classes": [
+        "Death Knight",
+        "Hunter",
+        "Monk",
+        "Mage",
+        "Priest",
+        "Paladin",
+        "Shaman",
+        "Warrior"],
+			"traits": [
+        {
+          "name": "Gift of the Naaru",
+          "description": "The draenei are blessed with a healing ability that can restore their health and that of their allies"
+        },
+        {
+          "name": "Heroic Presence",
+          "description": "Confident and strong, draenei receive a slight bonus to their main stat"
+        },
+        {
+          "name": "Shadow Resistance",
+          "description": "Draenei have a natural resistance to Shadow magic"
+        },
+        {
+          "name": "Gemcutting",
+          "description": "The talented draenei receive a bonus to their jewelcrafting skill"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "mask": 2097152,
+      "side": "alliance",
+      "name": "Worgen",
+			"classes": [
+        "Death Knight",
+        "Druid",
+        "Rogue",
+        "Hunter",
+        "Mage",
+        "Priest",
+        "Warlock",
+        "Warrior"],
+			"traits": [
+        {
+          "name": "Running Wild",
+          "description": "Drop to all fours to run as fast as a wild animal. Who needs a mount when you can run?"
+        },
+        {
+          "name": "Aberration",
+          "description": "Worgen have a natural resistance to Shadow and Nature damage"
+        },
+        {
+          "name": "Darkflight",
+          "description": "Activate your true form, drastically increasing movement speed for a short time"
+        },
+        {
+          "name": "Flayer",
+          "description": "Worgen claws are extremely sharp and can skin a slain beast rapidly"
+        },
+        {
+          "name": "Viciousness",
+          "description": "Worgen fight with the ferocity of an apex predator and have an increased chance to hit with critical strikes"
+        },
+        {
+          "name": "Two Forms",
+          "description": "Worgen can shift in and out of Human form while not in combat"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "mask": 8388608,
+      "side": "neutral",
+      "name": "Pandaren",
+			"classes": [
+        "Monk",
+        "Rogue",
+        "Hunter",
+        "Mage",
+        "Priest",
+        "Shaman",
+        "Warrior"],
+			"traits": [
+        {
+          "name": "Faction Neutral",
+          "description": "Pandaren may choose to align with either the Alliance or the Horde"
+        },
+        {
+          "name": "Epicurean",
+          "description": "Your love of food allows you to receive additional stats from eating specialized food"
+        },
+        {
+          "name": "Gourmand",
+          "description": "Pandaren are excellent cooks, and receive a slight increase to their cooking skill"
+        },
+        {
+          "name": "Inner Peace",
+          "description": "Your rested experience bonus lasts twice as long"
+        },
+        {
+          "name": "Bouncy",
+          "description": "Pandaren take less falling damage than other races"
+        },
+        {
+          "name": "Quaking Palm",
+          "description": "Strikes the target with lightning speed, incapacitating them for a short duration"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "mask": 67108864,
+      "side": "horde",
+      "name": "Nightborne",
+			"classes": [
+        "Hunter",
+        "Mage",
+        "Monk",
+        "Priest",
+        "Rogue",
+        "Warlock",
+        "Warrior"
+      ],
+			"traits": [
+        {
+          "name": "Ancient History",
+          "description": "Increases Inscription skill"
+        },
+        {
+          "name": "Arcane Affinity",
+          "description": ""
+        },
+        {
+          "name": "Cantrips",
+          "description": ""
+        },
+        {
+          "name": "Arcane Pulse",
+          "description": ""
+        },
+        {
+          "name": "Magic Resistance",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "mask": 134217728,
+      "side": "horde",
+      "name": "Highmountain Tauren",
+			"classes": [
+        "Druid",
+        "Hunter",
+        "Monk",
+        "Shaman",
+        "Warrior"
+      ],
+			"traits": [
+        {
+          "name": "Bull Rush",
+          "description": ""
+        },
+        {
+          "name": "Pride of Ironhorn",
+          "description": ""
+        },
+        {
+          "name": "Mountaineer",
+          "description": ""
+        },
+        {
+          "name": "Rugged Tenacity",
+          "description": ""
+        },
+        {
+          "name": "Waste Not, Want Not",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "mask": 268435456,
+      "side": "alliance",
+      "name": "Void Elf",
+			"classes": [
+        "Hunter",
+        "Mage",
+        "Monk",
+        "Priest",
+        "Rogue",
+        "Warlock",
+        "Warrior"
+      ],
+			"traits": [
+        {
+          "name": "Chill of Night",
+          "description": ""
+        },
+        {
+          "name": "Entropic Embrace",
+          "description": ""
+        },
+        {
+          "name": "Ethereal Connections",
+          "description": ""
+        },
+        {
+          "name": "Preternatural Calm",
+          "description": ""
+        },
+        {
+          "name": "Spatial Rift",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "mask": 536870912,
+      "side": "alliance",
+      "name": "Lightforged Draenei",
+			"classes": [
+        "Hunter",
+        "Mage",
+        "Paladin",
+        "Priest",
+        "Warrior"
+      ],
+			"traits": [
+        {
+          "name": "Light's Judgment",
+          "description": ""
+        },
+        {
+          "name": "Forge of Light",
+          "description": ""
+        },
+        {
+          "name": "Demonbane",
+          "description": ""
+        },
+        {
+          "name": "Light's Reckoning",
+          "description": ""
+        },
+        {
+          "name": "Holy Resistance",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "mask": 1073741824,
+      "side": "horde",
+      "name": "Zandalari Troll",
+			"classes": [
+        "Warrior",
+        "Paladin",
+        "Hunter",
+        "Rogue",
+        "Priest",
+        "Shaman",
+        "Mage",
+        "Monk",
+        "Druid"
+      ],
+			"traits": [
+        {
+          "name": "City of Gold",
+          "description": ""
+        },
+        {
+          "name": "Embrace of the Loa",
+          "description": ""
+        },
+        {
+          "name": "Pterrordax Swoop",
+          "description": ""
+        },
+        {
+          "name": "Regeneratin",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "mask": -2147483648,
+      "side": "alliance",
+      "name": "Kul Tiran",
+			"classes": [
+        "Warrior",
+        "Hunter",
+        "Rogue",
+        "Priest",
+        "Shaman",
+        "Mage",
+        "Monk",
+        "Druid"
+      ],
+			"traits": [
+        {
+          "id": 291628,
+          "name": "Brush It Off",
+          "description": "Increases Versatility by 1%. When you take damage, heal for 2% of that amount over 4 sec",
+          "castTime": "Passive"
+        },
+        {
+          "id": 291622,
+          "name": "Child of the Sea",
+          "description": "Hold your breath for 50% longer and swim 10% faster",
+          "castTime": "Passive"
+        },
+        {
+          "id": 287712,
+          "name": "Haymaker",
+          "description": "Wind up, then unleash your might upon your foe, dealing [Attack power * 0.75 * 1 * (1 + Versatility)] Physical damage, stunning for 3 sec, and knocking them back substantially",
+          "castTime": "1 sec",
+          "colldown": "2.5 min"
+        },
+        {
+          "id": 291442,
+          "name": "Jack of All Trades",
+          "description": "Skill in all professions increased by 5",
+          "castTime": "Passive"
+        },
+        {
+          "id": 291417,
+          "name": "Rime of the Ancient Mariner",
+          "description": "Reduces Frost and Nature damage taken by 1%.",
+          "castTime": "Passive"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "mask": 2,
+      "side": "alliance",
+      "name": "Dark Iron Dwarf",
+			"classes": [
+        "Hunter",
+        "Mage",
+        "Monk",
+        "Paladin",
+        "Priest",
+        "Rogue",
+        "Shaman",
+        "Warrior",
+        "Warlock"
+      ],
+			"traits": [
+        {
+          "id": 265223,
+          "name": "Dangeon Delver",
+          "description": "While indoors, move 4% faster.",
+          "castTime": "Passive"
+        },
+        {
+          "id": 265221,
+          "name": "Fireblood",
+          "description": "Removes all poison, disease, curse, magic, and bleed effects and increases your primary stat by 600 and an additional 200 for each effect removed. Lasts 8 sec",
+          "castTime": "Instant",
+          "colldown": "2 min" 
+        },
+        {
+          "id": 265224,
+          "name": "Forged in Flames",
+          "description": "Reduces damage taken from Physical attacks by 1%.",
+          "castTime": "Passive"
+        },
+        {
+          "id": 265222,
+          "name": "Mass Production",
+          "description": "Increases Blacksmithing skill by 5 and Blacksmithing speed by 25%",
+          "castTime": "Passive"
+        },
+        {
+          "id": 265225,
+          "name": "Mole Machine",
+          "description": "While outdoors, summon a Mole Machine that tunnels through the earth.",
+          "castTime": "5 sec",
+          "colldown": "30 min"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "mask": 8,
+      "side": "horde",
+      "name": "Mag'har Orc",
+			"classes": [
+        "Hunter",
+        "Mage",
+        "Monk",
+        "Priest",
+        "Rogue",
+        "Shaman",
+        "Warrior"
+      ],
+			"traits": [
+        {
+          "id": 274738,
+          "name": "Ancestral Call",
+          "description": "Invoke the spirits of your ancestors, granting you a random secondary stat for 15 sec.",
+          "castTime": "Instant",
+          "colldown": "2 min"
+        },
+        {
+          "id": 273216,
+          "name": "Open Skies",
+          "description": "Increases mounted speed by 10%.",
+          "castTime": "Passive"
+        },
+        {
+          "id": 273220,
+          "name": "Savage Blood",
+          "description": "Reduces the duration of Poisons, Diseases, and Curses by 10%.",
+          "castTime": "Passive"
+        },
+        {
+          "id": 273217,
+          "name": "Sympathetic Vigor",
+          "description": "Increases pet health by 10%.",
+          "castTime": "Passive"
+        }
+      ]
+    }
+  ]
+}
