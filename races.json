@@ -16,16 +16,23 @@
         "Warrior"],
 			"traits": [
         {
+          "id": 59752,
           "name": "Every Man for Himself",
-          "description": "Humans can shake off debilitating stun effects."
+          "description": "Humans can shake off debilitating stun effects.",
+          "castTime": "Instant",
+          "cooldown": "3 min"
         },
         {
+          "id": 20599,
           "name": "Diplomacy",
-          "description": "The straightforward and outspoken humans tend to get along well with other races and gain their trust with relative ease."
+          "description": "The straightforward and outspoken humans tend to get along well with other races and gain their trust with relative ease.",
+          "castTime": "Passive"
         },
         {
+          "id": 20598,
           "name": "The Human Spirit",
-          "description": "Humans are very adaptable, and get additional bonuses to all secondary stats from all sources."
+          "description": "Humans are very adaptable, and get additional bonuses to all secondary stats from all sources.",
+          "castTime": "Passive"
         }
       ]
     },
@@ -45,16 +52,17 @@
         "Warrior"],
 			"traits": [
         {
+          "id": 20572,
           "name": "Blood Fury",
-          "description": "Orcs can fly into a rage that increases their attack power or intellect (based on class) for a short time."
+          "description": "Orcs can fly into a rage that increases their attack power or intellect (based on class) for a short time.",
+          "castTime": "Instant",
+          "cooldown": "2 min"
         },
         {
+          "id": 20573,
           "name": "Hardiness",
-          "description": "Rugged by nature, orcs recover from stun effects more quickly than other races."
-        },
-        {
-          "name": "Command",
-          "description": "Orcs work well with combat pets, which receive a bonus to damage output under their care."
+          "description": "Rugged by nature, orcs recover from stun effects more quickly than other races.",
+          "castTime": "Passive"
         }
       ]
 
@@ -77,20 +85,29 @@
         "Warrior"],
 			"traits": [
         {
+          "id": 92682,
           "name": "Explorer",
-          "description": "Dwarves receive a skill bonus to archaeology and are able to survey faster than other races."
+          "description": "Dwarves receive a skill bonus to archaeology and are able to survey faster than other races.",
+          "castTime": "Passive"
         },
         {
+          "id": 20596,
           "name": "Frost Resistance",
-          "description": "Ironforge dwarves have a natural resistance to Frost magic."
+          "description": "Ironforge dwarves have a natural resistance to Frost magic.",
+          "castTime": "Passive"
         },
         {
+          "id": 59224,
           "name": "Might of the Mountain",
-          "description": "Dwarves battle with powerful intent and gain a bonus to critical strikes."
+          "description": "Dwarves battle with powerful intent and gain a bonus to critical strikes.",
+          "castTime": "Passive"
         },
         {
+          "id": 20594,
           "name": "Stoneform",
-          "description": "Dwarves can temporarily turn to living stone, neutralizing ailments and reducing damage taken."
+          "description": "Dwarves can temporarily turn to living stone, neutralizing ailments and reducing damage taken.",
+          "castTime": "Instant",
+          "cooldown": "2 min"
         }
       ]
     },
@@ -111,24 +128,35 @@
         "Warrior"],
 			"traits": [
         {
+          "id": 58984,
           "name": "Shadowmeld",
-          "description": "Night Elves can slip into the shadows, awaiting for the right moment to strike."
+          "description": "Night Elves can slip into the shadows, awaiting for the right moment to strike.",
+          "castTime": "Instant",
+          "cooldown": "2 min"
         },
         {
+          "id": 20585,
           "name": "Wisp Spirit",
-          "description": "Fallen night elves assume the form of fleet wisp spirits."
+          "description": "Fallen night elves assume the form of fleet wisp spirits.",
+          "castTime": "Passive"
         },
         {
+          "id": 20583,
           "name": "Nature Resistance",
-          "description": "Night elves can resist Nature magic"
+          "description": "Night elves can resist Nature magic",
+          "castTime": "Passive"
         },
         {
+          "id": 20582,
           "name": "Quickness",
-          "description": "The nimble night elves have slightly increased movement speed as well as a minor chance to completely avoid being hit by physical attacks"
+          "description": "The nimble night elves have slightly increased movement speed as well as a minor chance to completely avoid being hit by physical attacks",
+          "castTime": "Passive"
         },
         {
+          "id": 154748,
           "name": "Touch of Elune",
-          "description": "Night elves gain a unique benefit that changes between day and night time"
+          "description": "Night elves gain a unique benefit that changes between day and night time",
+          "castTime": "Passive"
         }
       ]
     },
@@ -148,20 +176,29 @@
         "Warrior"],
 			"traits": [
         {
+          "id": 7744,
           "name": "Will of the Forsaken",
-          "description": "The Forsaken can shake off any charm, fear and sleep effects at will"
+          "description": "The Forsaken can shake off any charm, fear and sleep effects at will",
+          "castTime": "Instant",
+          "cooldown": "2 min"
         },
         {
+          "id": 20579,
           "name": "Shadow Resistance",
-          "description": "The Forsaken have a natural resistance to Shadow magic"
+          "description": "The Forsaken have a natural resistance to Shadow magic",
+          "castTime": "Passive"
         },
         {
+          "id": 109945,
           "name": "Cannibalize",
-          "description": "One rather grisly means for the Forsaken to replenish their health is by consuming dead bodies"
+          "description": "One rather grisly means for the Forsaken to replenish their health is by consuming dead bodies",
+          "castTime": "Instant"
         },
         {
+          "id": 5227,
           "name": "Touch of the Grave",
-          "description": "The Forsaken can sometimes drain the life from their enemies and use it to repair their own bodies"
+          "description": "The Forsaken can sometimes drain the life from their enemies and use it to repair their own bodies",
+          "castTime": "Passive"
         }
       ]
     },
@@ -181,24 +218,35 @@
         "Warrior"],
 			"traits": [
         {
+          "id": 154743,
           "name": "Brawn",
-          "description": "Tauren are large, able-bodied warriors and gain a bonus to critical strikes"
+          "description": "Tauren are large, able-bodied warriors and gain a bonus to critical strikes",
+          "castTime": "Passive"
         },
         {
+          "id": 20552,
           "name": "Cultivation",
-          "description": "Tauren receive a skill bonus to herbalism, and they gather herbs faster than most herbalists"
+          "description": "Tauren receive a skill bonus to herbalism, and they gather herbs faster than most herbalists",
+          "castTime": "Passive"
         },
         {
+          "id": 20550,
           "name": "Endurance",
-          "description": "Their exceptional constitution grants the tauren a bonus to their base health"
+          "description": "Their exceptional constitution grants the tauren a bonus to their base health",
+          "castTime": "Passive"
         },
         {
+          "id": 20551,
           "name": "Nature Resistance",
-          "description": "Tauren are resistant to Nature magic"
+          "description": "Tauren are resistant to Nature magic",
+          "castTime": "Passive"
         },
         {
+          "id": 20549,
           "name": "War Stomp",
-          "description": "Shaking the ground with a mighty stomp of their hooves, tauren can briefly stun enemies"
+          "description": "Shaking the ground with a mighty stomp of their hooves, tauren can briefly stun enemies",
+          "castTime": "0.5 sec",
+          "cooldown": "1.5 min"
         }
       ]
     },
@@ -218,24 +266,35 @@
         "Rogue"],
 			"traits": [
         {
+          "id": 20589,
           "name": "Escape Artist",
-          "description": "Gnomes are small and nimble, which allows them to extricate themselves from even the most cunning traps"
+          "description": "Gnomes are small and nimble, which allows them to extricate themselves from even the most cunning traps",
+          "castTime": "Instant",
+          "cooldown": "1 min"
         },
         {
+          "id": 20592,
           "name": "Arcane Resistance",
-          "description": "Gnomes have a natural resistance to Arcane magic"
+          "description": "Gnomes have a natural resistance to Arcane magic",
+          "castTime": "Passive"
         },
         {
+          "id": 227057,
           "name": "Expansive Mind",
-          "description": "Curious, creative, and brilliant, gnomes receive a small bonus to their resource pool"
+          "description": "Curious, creative, and brilliant, gnomes receive a small bonus to their resource pool",
+          "castTime": "Passive"
         },
         {
+          "id": 20593,
           "name": "Engineering Specialization",
-          "description": "Their expertise with gizmos, gadgets, and gimmicks provides gnomes with a skill bonus to engineering"
+          "description": "Their expertise with gizmos, gadgets, and gimmicks provides gnomes with a skill bonus to engineering",
+          "castTime": "Passive"
         },
         {
+          "id": 92680,
           "name": "Nimble Fingers",
-          "description": "Gnomes, while diminutive in stature, are dangerously quick"
+          "description": "Gnomes, while diminutive in stature, are dangerously quick",
+          "castTime": "Passive"
         }
       ]
     },
@@ -257,20 +316,29 @@
         "Warrior"],
 			"traits": [
         {
+          "id": 26297,
           "name": "Berserking",
-          "description": "Trolls can launch themselves into a frenzy, and get increased Haste temporarily"
+          "description": "Trolls can launch themselves into a frenzy, and get increased Haste temporarily",
+          "castTime": "Instant",
+          "cooldown": "3 min"
         },
         {
+          "id": 58943,
           "name": "Da Voodoo Shuffle",
-          "description": "Thanks to their impressive legerity, trolls are less affected by movement impairing effects"
+          "description": "Thanks to their impressive legerity, trolls are less affected by movement impairing effects",
+          "castTime": "Passive"
         },
         {
+          "id": 20555,
           "name": "Regeneration",
-          "description": "Trolls have a natural healing factor that constantly replenishes their health"
+          "description": "Trolls have a natural healing factor that constantly replenishes their health",
+          "castTime": "Passive"
         },
         {
+          "id": 20557,
           "name": "Beast Slaying",
-          "description": "Trolls hunt with a keen awareness and gain additional experience from killing beasts"
+          "description": "Trolls hunt with a keen awareness and gain additional experience from killing beasts",
+          "castTime": "Passive"
         }
       ]
     },
@@ -290,28 +358,43 @@
         "Warrior"],
 			"traits": [
         {
+          "id": 69070,
           "name": "Rocket Jump",
-          "description": "Goblins can use their (relatively) trusty rocket belts to launch themselves over short distances"
+          "description": "Goblins can use their (relatively) trusty rocket belts to launch themselves over short distances",
+          "castTime": "Instant",
+          "cooldown": "1.5 min"
         },
         {
+          "id": 69041,
           "name": "Rocket Barrage",
-          "description": "The rocket belt can also launch rockets at an enemy, causing fire damage to the target"
+          "description": "The rocket belt can also launch rockets at an enemy, causing fire damage to the target",
+          "castTime": "Instant",
+          "cooldown": "1.5 min"
         },
         {
+          "id": 69046,
           "name": "Pack Hobgoblin",
-          "description": "Goblins can access their bank vault from anywhere after earning the help of a trusted friend"
+          "description": "Goblins can access their bank vault from anywhere after earning the help of a trusted friend",
+          "castTime": "Instant",
+          "cooldown": "30 min"
         },
         {
+          "id": 69044,
           "name": "Best Deals Anywhere",
-          "description": "Wheeling and dealing is second nature to goblins, and they get discounts from vendors"
+          "description": "Wheeling and dealing is second nature to goblins, and they get discounts from vendors",
+          "castTime": "Passive"
         },
         {
+          "id": 69042,
           "name": "Time is Money",
-          "description": "Goblins cash in on a bonus to haste"
+          "description": "Goblins cash in on a bonus to haste",
+          "castTime": "Passive"
         },
         {
+          "id": 69045,
           "name": "Better Living Through Chemistry",
-          "description": "Goblins have a natural affinity for hazardous materials and receive a bonus to Alchemy"
+          "description": "Goblins have a natural affinity for hazardous materials and receive a bonus to Alchemy",
+          "castTime": "Passive"
         }
       ]
     },
@@ -333,20 +416,29 @@
         "Warrior"],
 			"traits": [
         {
+          "id": 154742,
           "name": "Arcane Acuity",
-          "description": "Blood elves possess a preternatural talent for precision and gain a bonus to their critical strike chance"
+          "description": "Blood elves possess a preternatural talent for precision and gain a bonus to their critical strike chance",
+          "castTime": "Passive"
         },
         {
+          "id": 28730,
           "name": "Arcane Torrent",
-          "description": "Blood elves can disrupt magic, removing one beneficial effect from enemies around them and restoring some of their own resources"
+          "description": "Blood elves can disrupt magic, removing one beneficial effect from enemies around them and restoring some of their own resources",
+          "castTime": "Instant",
+          "cooldown": "2 min"
         },
         {
+          "id": 28877,
           "name": "Arcane Affinity",
-          "description": "Blood elves are skilled in the mystical arts and receive a skill bonus to enchanting"
+          "description": "Blood elves are skilled in the mystical arts and receive a skill bonus to enchanting",
+          "castTime": "Passive"
         },
         {
-          "name": "Magic Resistance",
-          "description": "Blood elves have a natural resistance to arcane magic spells"
+          "id": 822,
+          "name": "Arcane Resistance",
+          "description": "Blood elves have a natural resistance to arcane magic spells",
+          "castTime": "Passive"
         }
       ]
     },
@@ -366,20 +458,29 @@
         "Warrior"],
 			"traits": [
         {
+          "id": 59544,
           "name": "Gift of the Naaru",
-          "description": "The draenei are blessed with a healing ability that can restore their health and that of their allies"
+          "description": "The draenei are blessed with a healing ability that can restore their health and that of their allies",
+          "castTime": "Instant",
+          "cooldown": "3 min"
         },
         {
+          "id": 6562,
           "name": "Heroic Presence",
-          "description": "Confident and strong, draenei receive a slight bonus to their main stat"
+          "description": "Confident and strong, draenei receive a slight bonus to their main stat",
+          "castTime": "Passive"
         },
         {
+          "id": 59221,
           "name": "Shadow Resistance",
-          "description": "Draenei have a natural resistance to Shadow magic"
+          "description": "Draenei have a natural resistance to Shadow magic",
+          "castTime": "Passive"
         },
         {
+          "id": 28875,
           "name": "Gemcutting",
-          "description": "The talented draenei receive a bonus to their jewelcrafting skill"
+          "description": "The talented draenei receive a bonus to their jewelcrafting skill",
+          "castTime": "Passive"
         }
       ]
     },
@@ -399,28 +500,42 @@
         "Warrior"],
 			"traits": [
         {
+          "id": 87840,
           "name": "Running Wild",
-          "description": "Drop to all fours to run as fast as a wild animal. Who needs a mount when you can run?"
+          "description": "Drop to all fours to run as fast as a wild animal. Who needs a mount when you can run?",
+          "castTime": "1.5 sec"
         },
         {
+          "id": 68976,
           "name": "Aberration",
-          "description": "Worgen have a natural resistance to Shadow and Nature damage"
+          "description": "Worgen have a natural resistance to Shadow and Nature damage",
+          "castTime": "Passive"
         },
         {
+          "id": 68992,
           "name": "Darkflight",
-          "description": "Activate your true form, drastically increasing movement speed for a short time"
+          "description": "Activate your true form, drastically increasing movement speed for a short time",
+          "castTime": "Instant",
+          "cooldown": "2 min"
         },
         {
+          "id": 68978,
           "name": "Flayer",
-          "description": "Worgen claws are extremely sharp and can skin a slain beast rapidly"
+          "description": "Worgen claws are extremely sharp and can skin a slain beast rapidly",
+          "castTime": "Passive"
         },
         {
+          "id": 68975,
           "name": "Viciousness",
-          "description": "Worgen fight with the ferocity of an apex predator and have an increased chance to hit with critical strikes"
+          "description": "Worgen fight with the ferocity of an apex predator and have an increased chance to hit with critical strikes",
+          "castTime": "Passive"
         },
         {
+          "id": 68996,
           "name": "Two Forms",
-          "description": "Worgen can shift in and out of Human form while not in combat"
+          "description": "Worgen can shift in and out of Human form while not in combat",
+          "castTime": "Instant",
+          "cooldown": "1.5 sec"
         }
       ]
     },
@@ -439,28 +554,41 @@
         "Warrior"],
 			"traits": [
         {
+          "id": 84116,
           "name": "Faction Neutral",
-          "description": "Pandaren may choose to align with either the Alliance or the Horde"
+          "description": "Pandaren may choose to align with either the Alliance or the Horde",
+          "castTime": "Passive"
         },
         {
+          "id": 107072,
           "name": "Epicurean",
-          "description": "Your love of food allows you to receive additional stats from eating specialized food"
+          "description": "Your love of food allows you to receive additional stats from eating specialized food",
+          "castTime": "Passive"
         },
         {
+          "id": 107073,
           "name": "Gourmand",
-          "description": "Pandaren are excellent cooks, and receive a slight increase to their cooking skill"
+          "description": "Pandaren are excellent cooks, and receive a slight increase to their cooking skill",
+          "castTime": "Passive"
         },
         {
+          "id": 107074,
           "name": "Inner Peace",
-          "description": "Your rested experience bonus lasts twice as long"
+          "description": "Your rested experience bonus lasts twice as long",
+          "castTime": "Passive"
         },
         {
+          "id": 107076,
           "name": "Bouncy",
-          "description": "Pandaren take less falling damage than other races"
+          "description": "Pandaren take less falling damage than other races",
+          "castTime": "Passive"
         },
         {
+          "id": 107079,
           "name": "Quaking Palm",
-          "description": "Strikes the target with lightning speed, incapacitating them for a short duration"
+          "description": "Strikes the target with lightning speed, incapacitating them for a short duration",
+          "castTime": "Instant",
+          "cooldown": "2 min"
         }
       ]
     },
@@ -480,24 +608,36 @@
       ],
 			"traits": [
         {
+          "id": 255663,
           "name": "Ancient History",
-          "description": "Increases Inscription skill"
+          "description": "Inscription skill increased by 15",
+          "castTime": "Passive"
         },
         {
-          "name": "Arcane Affinity",
-          "description": ""
+          "id": 255664,
+          "name": "Arcane Resistance",
+          "description": "Reduces Arcane damage taken by 1%",
+          "castTime": "Passive"
         },
         {
+          "id": 255661,
           "name": "Cantrips",
-          "description": ""
+          "description": "Conjure up an Eldritch Grimoire, allowing you mail access for 1.5 min",
+          "castTime": "3 sec",
+          "cooldown": "10 min"
         },
         {
+          "id": 260364,
           "name": "Arcane Pulse",
-          "description": ""
+          "description": "Deals (Attack power * 0.5) Arcane damage to nearby enemies and reduces their movement speed by 50%. Lasts 12 sec",
+          "castTime": "Instant",
+          "cooldown": "3 min"
         },
         {
-          "name": "Magic Resistance",
-          "description": ""
+          "id": 255665,
+          "name": "Magic Affinity",
+          "description": "Increases magical damage dealt by 1%.",
+          "castTime": "Passive"
         }
       ]
     },
@@ -515,24 +655,35 @@
       ],
 			"traits": [
         {
+          "id": 255654,
           "name": "Bull Rush",
-          "description": ""
+          "description": "Charge forward for 1 sec, knocking enemies down for 1.5 sec",
+          "castTime": "Instant",
+          "cooldown": "2 min"
         },
         {
+          "id": 255655,
           "name": "Pride of Ironhorn",
-          "description": ""
+          "description": "Mining skill increased by 15 and allows you to mine faster",
+          "castTime": "Passive"
         },
         {
+          "id": 255658,
           "name": "Mountaineer",
-          "description": ""
+          "description": "Increases your Versatility by 1%",
+          "castTime": "Passive"
         },
         {
+          "id": 255659,
           "name": "Rugged Tenacity",
-          "description": ""
+          "description": "Reduces damage taken by (Stamina * 0.0003 * 20)",
+          "castTime": "Passive"
         },
         {
+          "id": 255656,
           "name": "Waste Not, Want Not",
-          "description": ""
+          "description": "You have a chance to loot additional meat and fish",
+          "castTime": "Passive"
         }
       ]
     },
@@ -552,24 +703,35 @@
       ],
 			"traits": [
         {
+          "id": 255668,
           "name": "Chill of Night",
-          "description": ""
+          "description": "Reduces Shadow damage taken by 1%",
+          "castTime": "Passive"
         },
         {
+          "id": 255669,
           "name": "Entropic Embrace",
-          "description": ""
+          "description": "Your abilities have a chance to empower you with the essence of the Void, causing your damage and healing effects to deal an additional 5% as Shadowfrost for 12 sec",
+          "castTime": "Passive"
         },
         {
+          "id": 255667,
           "name": "Ethereal Connections",
-          "description": ""
+          "description": "Reduces the cost of Void Storage and Transmogrification by 50%",
+          "castTime": "Passive"
         },
         {
+          "id": 255670,
           "name": "Preternatural Calm",
-          "description": ""
+          "description": "Your spell casts are not delayed by taking damage",
+          "castTime": "Passive"
         },
         {
+          "id": 256948,
           "name": "Spatial Rift",
-          "description": ""
+          "description": "Tear a rift in space. Reactivate this ability to teleport through the rift",
+          "castTime": "Instant",
+          "cooldown": "3 min"
         }
       ]
     },
@@ -587,24 +749,36 @@
       ],
 			"traits": [
         {
+          "id": 255647,
           "name": "Light's Judgment",
-          "description": ""
+          "description": "Call down a strike of Holy energy, dealing [Attack power * 3 * 1 * (1 + Versatility)] Holy damage to enemies within 5 yards after 3 sec.",
+          "castTime": "Instant",
+          "cooldown": "2.5 min"       
         },
         {
+          "id": 259930, 
           "name": "Forge of Light",
-          "description": ""
+          "description": "Summon a Forge of Light, enabling Blacksmithing",
+          "castTime": "2 sec",
+          "cooldown": "15 min"
         },
         {
+          "id": 255653,
           "name": "Demonbane",
-          "description": ""
+          "description": "Experience gains from killing Demons increased by 20%.",
+          "castTime": "Passive"
         },
         {
+          "id": 255652,
           "name": "Light's Reckoning",
-          "description": ""
+          "description": "Erupt with Light upon death. Deals 27409 Holy damage to enemies within 8 yards and heals allies for 27409.",
+          "castTime": "Passive"
         },
         {
+          "id": 255651,
           "name": "Holy Resistance",
-          "description": ""
+          "description": "Reduces Holy damage taken by 1%",
+          "castTime": "Passive"
         }
       ]
     },
@@ -626,20 +800,31 @@
       ],
 			"traits": [
         {
+          "id": 291619,
           "name": "City of Gold",
-          "description": ""
+          "description": "Increases gold earned from creatures by 2%",
+          "castTime": "Passive"
         },
         {
+          "id": 292752,
           "name": "Embrace of the Loa",
-          "description": ""
+          "description": "Choose your Loa by making an offering at Loa Shrines around the world. Each Loa offers unique powers. Guards in Dazar'alor will tell you where Shrines can be found.",
+          "castTime": "3 sec",
+          "cooldown": "5 days"
         },
         {
+          "id": 281954,
           "name": "Pterrordax Swoop",
-          "description": ""
+          "description": "Reduces your falling speed for 2 min.",
+          "castTime": "Instant",
+          "cooldown": "15 min"
         },
         {
-          "name": "Regeneratin",
-          "description": ""
+          "id": 291944,
+          "name": "Regeneratin'",
+          "description": "Regenerate 100% of your maximum health over 6 sec, interrupted by damage",
+          "castTime": "6 sec",
+          "cooldown": "2.5 min"
         }
       ]
     },
@@ -676,7 +861,7 @@
           "name": "Haymaker",
           "description": "Wind up, then unleash your might upon your foe, dealing [Attack power * 0.75 * 1 * (1 + Versatility)] Physical damage, stunning for 3 sec, and knocking them back substantially",
           "castTime": "1 sec",
-          "colldown": "2.5 min"
+          "cooldown": "2.5 min"
         },
         {
           "id": 291442,
@@ -720,7 +905,7 @@
           "name": "Fireblood",
           "description": "Removes all poison, disease, curse, magic, and bleed effects and increases your primary stat by 600 and an additional 200 for each effect removed. Lasts 8 sec",
           "castTime": "Instant",
-          "colldown": "2 min" 
+          "cooldown": "2 min" 
         },
         {
           "id": 265224,
@@ -739,7 +924,7 @@
           "name": "Mole Machine",
           "description": "While outdoors, summon a Mole Machine that tunnels through the earth.",
           "castTime": "5 sec",
-          "colldown": "30 min"
+          "cooldown": "30 min"
         }
       ]
     },
@@ -763,7 +948,7 @@
           "name": "Ancestral Call",
           "description": "Invoke the spirits of your ancestors, granting you a random secondary stat for 15 sec.",
           "castTime": "Instant",
-          "colldown": "2 min"
+          "cooldown": "2 min"
         },
         {
           "id": 273216,
