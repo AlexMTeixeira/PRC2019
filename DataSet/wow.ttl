@@ -1,0 +1,1624 @@
+@prefix : <http://prc.di.uminho.pt/2019/worldOfwarcraft#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://prc.di.uminho.pt/2019/worldOfwarcraft> .
+
+<http://prc.di.uminho.pt/2019/worldOfwarcraft> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#hasClass
+:hasClass rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isClassOf ;
+          rdfs:domain :Race ;
+          rdfs:range :Class .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#hasFaction
+:hasFaction rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            owl:inverseOf :isFactionOf ;
+            rdfs:domain :Race ;
+            rdfs:range :Faction .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#hasPowerType
+:hasPowerType rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isPowerTypeOf ;
+              rdfs:domain :Class ;
+              rdfs:range :PowerType .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#hasTrait
+:hasTrait rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isTraitOf ;
+          rdfs:domain :Race ;
+          rdfs:range :Trait .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#isClassOf
+:isClassOf rdf:type owl:ObjectProperty .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#isFactionOf
+:isFactionOf rdf:type owl:ObjectProperty .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#isPowerTypeOf
+:isPowerTypeOf rdf:type owl:ObjectProperty .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#isTraitOf
+:isTraitOf rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#castTime
+:castTime rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Spell ;
+          rdfs:range xsd:string .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#cooldown
+:cooldown rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Spell ;
+          rdfs:range xsd:string .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Spell ;
+             rdfs:range xsd:string .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#id
+:id rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Class ,
+                :Race ,
+                :Spell ;
+    rdfs:range xsd:int .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Class ,
+                  :Faction ,
+                  :Race ;
+      rdfs:range xsd:string .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#typeName
+:typeName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :PowerType ;
+          rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#Alliance
+:Alliance rdf:type owl:Class ;
+          rdfs:subClassOf :Faction .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#Class
+:Class rdf:type owl:Class .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#Faction
+:Faction rdf:type owl:Class .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#Horde
+:Horde rdf:type owl:Class ;
+       rdfs:subClassOf :Faction .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#PowerType
+:PowerType rdf:type owl:Class .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#Race
+:Race rdf:type owl:Class .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#Spell
+:Spell rdf:type owl:Class .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#Trait
+:Trait rdf:type owl:Class ;
+       rdfs:subClassOf :Spell .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#alliance
+:alliance rdf:type owl:NamedIndividual ,
+                   :Alliance ;
+          :name "Alliance" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c1
+:c1 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :rage ;
+    :id 1 ;
+    :name "Warrior" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c10
+:c10 rdf:type owl:NamedIndividual ,
+              :Class ;
+     :hasPowerType :energy ;
+     :id 10 ;
+     :name "Monk" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c11
+:c11 rdf:type owl:NamedIndividual ,
+              :Class ;
+     :hasPowerType :energy ,
+                   :focus ,
+                   :mana ;
+     :id 11 ;
+     :name "Druid" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c12
+:c12 rdf:type owl:NamedIndividual ,
+              :Class ;
+     :hasPowerType :fury ;
+     :id 12 ;
+     :name "Demon Hunter" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c2
+:c2 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :mana ;
+    :id 2 ;
+    :name "Paladin" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c3
+:c3 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :focus ;
+    :id 3 ;
+    :name "Hunter" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c4
+:c4 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :energy ;
+    :id 4 ;
+    :name "Rogue" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c5
+:c5 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :mana ;
+    :id 5 ;
+    :name "Priest" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c6
+:c6 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :runic-power ;
+    :id 6 ;
+    :name "Death Knight" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c7
+:c7 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :mana ;
+    :id 7 ;
+    :name "Shaman" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c8
+:c8 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :mana ;
+    :id 8 ;
+    :name "Mage" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#c9
+:c9 rdf:type owl:NamedIndividual ,
+             :Class ;
+    :hasPowerType :mana ;
+    :id 9 ;
+    :name "Warlock" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#energy
+:energy rdf:type owl:NamedIndividual ,
+                 :PowerType ;
+        :typeName "Energy" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#focus
+:focus rdf:type owl:NamedIndividual ,
+                :PowerType ;
+       :typeName "Focus" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#fury
+:fury rdf:type owl:NamedIndividual ,
+               :PowerType ;
+      :typeName "Fury" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#horde
+:horde rdf:type owl:NamedIndividual ,
+                :Horde ;
+       :name "Horde" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#mana
+:mana rdf:type owl:NamedIndividual ,
+               :PowerType ;
+      :typeName "Mana" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#neutral
+:neutral rdf:type owl:NamedIndividual ,
+                  :Faction ;
+         :name "Neutral" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r1
+:r1 rdf:type owl:NamedIndividual ,
+             :Race ;
+    :hasFaction :alliance ;
+    :hasTrait :s20598 ,
+              :s20599 ,
+              :s59752 ;
+    :id 1 ;
+    :name "Human" ;
+    :hasClass :c1 ,
+              :c10 ,
+              :c2 ,
+              :c3 ,
+              :c4 ,
+              :c5 ,
+              :c6 ,
+              :c8 ,
+              :c9 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r10
+:r10 rdf:type owl:NamedIndividual ,
+              :Race ;
+     :hasFaction :horde ;
+     :hasTrait :s154742 ,
+               :s28730 ,
+               :s28877 ,
+               :s822 ;
+     :id 10 ;
+     :name "Blood Elf" ;
+     :hasClass :c1 ,
+               :c10 ,
+               :c12 ,
+               :c2 ,
+               :c3 ,
+               :c4 ,
+               :c5 ,
+               :c6 ,
+               :c8 ,
+               :c9 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r11
+:r11 rdf:type owl:NamedIndividual ,
+              :Race ;
+     :hasFaction :alliance ;
+     :hasTrait :s28875 ,
+               :s59221 ,
+               :s59544 ,
+               :s6562 ;
+     :id 11 ;
+     :name "Draenei" ;
+     :hasClass :c1 ,
+               :c10 ,
+               :c2 ,
+               :c3 ,
+               :c5 ,
+               :c6 ,
+               :c7 ,
+               :c8 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r2
+:r2 rdf:type owl:NamedIndividual ,
+             :Race ;
+    :hasFaction :horde ;
+    :hasTrait :s20572 ,
+              :s20573 ;
+    :id 2 ;
+    :name "Orc" ;
+    :hasClass :c1 ,
+              :c10 ,
+              :c3 ,
+              :c4 ,
+              :c6 ,
+              :c7 ,
+              :c8 ,
+              :c9 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r22
+:r22 rdf:type owl:NamedIndividual ,
+              :Race ;
+     :hasFaction :alliance ;
+     :hasTrait :s68975 ,
+               :s68976 ,
+               :s68978 ,
+               :s68992 ,
+               :s68996 ,
+               :s87840 ;
+     :id 22 ;
+     :name "Worgen" ;
+     :hasClass :c1 ,
+               :c11 ,
+               :c3 ,
+               :c4 ,
+               :c5 ,
+               :c6 ,
+               :c8 ,
+               :c9 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r24
+:r24 rdf:type owl:NamedIndividual ,
+              :Race ;
+     :hasFaction :neutral ;
+     :hasTrait :s107072 ,
+               :s107073 ,
+               :s107074 ,
+               :s107076 ,
+               :s107079 ,
+               :s84116 ;
+     :id 24 ;
+     :name "Pandaren" ;
+     :hasClass :c1 ,
+               :c10 ,
+               :c3 ,
+               :c4 ,
+               :c5 ,
+               :c7 ,
+               :c8 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r27
+:r27 rdf:type owl:NamedIndividual ,
+              :Race ;
+     :hasFaction :horde ;
+     :hasTrait :s255661 ,
+               :s255663 ,
+               :s255664 ,
+               :s255665 ,
+               :s260364 ;
+     :id 27 ;
+     :name "Nightborne" ;
+     :hasClass :c1 ,
+               :c10 ,
+               :c3 ,
+               :c4 ,
+               :c5 ,
+               :c8 ,
+               :c9 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r28
+:r28 rdf:type owl:NamedIndividual ,
+              :Race ;
+     :hasFaction :horde ;
+     :hasTrait :s255654 ,
+               :s255655 ,
+               :s255656 ,
+               :s255658 ,
+               :s255659 ;
+     :id 28 ;
+     :name "Highmountain Tauren" ;
+     :hasClass :c1 ,
+               :c10 ,
+               :c11 ,
+               :c3 ,
+               :c7 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r29
+:r29 rdf:type owl:NamedIndividual ,
+              :Race ;
+     :hasFaction :alliance ;
+     :hasTrait :s255667 ,
+               :s255668 ,
+               :s255669 ,
+               :s255670 ,
+               :s256948 ;
+     :id 29 ;
+     :name "Void Elf" ;
+     :hasClass :c1 ,
+               :c10 ,
+               :c3 ,
+               :c4 ,
+               :c5 ,
+               :c8 ,
+               :c9 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r3
+:r3 rdf:type owl:NamedIndividual ,
+             :Race ;
+    :hasFaction :alliance ;
+    :hasTrait :s20594 ,
+              :s20596 ,
+              :s59224 ,
+              :s92682 ;
+    :id 3 ;
+    :name "Dwarf" ;
+    :hasClass :c1 ,
+              :c10 ,
+              :c2 ,
+              :c3 ,
+              :c4 ,
+              :c5 ,
+              :c6 ,
+              :c7 ,
+              :c8 ,
+              :c9 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r30
+:r30 rdf:type owl:NamedIndividual ,
+              :Race ;
+     :hasFaction :alliance ;
+     :hasTrait :s255647 ,
+               :s255651 ,
+               :s255652 ,
+               :s255653 ,
+               :s259930 ;
+     :id 30 ;
+     :name "Lightforged Draenei" ;
+     :hasClass :c1 ,
+               :c2 ,
+               :c3 ,
+               :c5 ,
+               :c8 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r31
+:r31 rdf:type owl:NamedIndividual ,
+              :Race ;
+     :hasFaction :horde ;
+     :hasTrait :s281954 ,
+               :s291619 ,
+               :s291944 ,
+               :s292752 ;
+     :id 31 ;
+     :name "Zandalari Troll" ;
+     :hasClass :c1 ,
+               :c10 ,
+               :c11 ,
+               :c2 ,
+               :c3 ,
+               :c4 ,
+               :c5 ,
+               :c7 ,
+               :c8 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r32
+:r32 rdf:type owl:NamedIndividual ,
+              :Race ;
+     :hasFaction :alliance ;
+     :hasTrait :s287712 ,
+               :s291417 ,
+               :s291442 ,
+               :s291622 ,
+               :s291628 ;
+     :id 32 ;
+     :name "Kul Tiran" ;
+     :hasClass :c1 ,
+               :c10 ,
+               :c11 ,
+               :c3 ,
+               :c4 ,
+               :c5 ,
+               :c7 ,
+               :c8 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r34
+:r34 rdf:type owl:NamedIndividual ,
+              :Race ;
+     :hasFaction :alliance ;
+     :hasTrait :s265221 ,
+               :s265222 ,
+               :s265223 ,
+               :s265224 ,
+               :s265225 ;
+     :id 34 ;
+     :name "Dark Iron Dwarf" ;
+     :hasClass :c1 ,
+               :c10 ,
+               :c2 ,
+               :c3 ,
+               :c4 ,
+               :c5 ,
+               :c7 ,
+               :c8 ,
+               :c9 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r36
+:r36 rdf:type owl:NamedIndividual ,
+              :Race ;
+     :hasFaction :horde ;
+     :hasTrait :s273216 ,
+               :s273217 ,
+               :s273220 ,
+               :s274738 ;
+     :id 36 ;
+     :name "Mag'har Orc" ;
+     :hasClass :c1 ,
+               :c10 ,
+               :c3 ,
+               :c4 ,
+               :c5 ,
+               :c7 ,
+               :c8 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r4
+:r4 rdf:type owl:NamedIndividual ,
+             :Race ;
+    :hasFaction :alliance ;
+    :hasTrait :s154748 ,
+              :s20582 ,
+              :s20583 ,
+              :s20585 ,
+              :s58984 ;
+    :id 4 ;
+    :name "Night Elf" ;
+    :hasClass :c1 ,
+              :c10 ,
+              :c11 ,
+              :c12 ,
+              :c3 ,
+              :c4 ,
+              :c5 ,
+              :c6 ,
+              :c8 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r5
+:r5 rdf:type owl:NamedIndividual ,
+             :Race ;
+    :hasFaction :horde ;
+    :hasTrait :s109945 ,
+              :s20579 ,
+              :s5227 ,
+              :s7744 ;
+    :id 5 ;
+    :name "Undead" ;
+    :hasClass :c1 ,
+              :c10 ,
+              :c3 ,
+              :c4 ,
+              :c5 ,
+              :c6 ,
+              :c8 ,
+              :c9 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r6
+:r6 rdf:type owl:NamedIndividual ,
+             :Race ;
+    :hasFaction :horde ;
+    :hasTrait :s154743 ,
+              :s20549 ,
+              :s20550 ,
+              :s20551 ,
+              :s20552 ;
+    :id 6 ;
+    :name "Tauren" ;
+    :hasClass :c1 ,
+              :c10 ,
+              :c11 ,
+              :c2 ,
+              :c3 ,
+              :c5 ,
+              :c6 ,
+              :c7 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r7
+:r7 rdf:type owl:NamedIndividual ,
+             :Race ;
+    :hasFaction :alliance ;
+    :hasTrait :s20589 ,
+              :s20592 ,
+              :s20593 ,
+              :s227057 ,
+              :s92680 ;
+    :id 7 ;
+    :name "Gnome" ;
+    :hasClass :c1 ,
+              :c10 ,
+              :c3 ,
+              :c4 ,
+              :c5 ,
+              :c6 ,
+              :c8 ,
+              :c9 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r8
+:r8 rdf:type owl:NamedIndividual ,
+             :Race ;
+    :hasFaction :horde ;
+    :hasTrait :s20555 ,
+              :s20557 ,
+              :s26297 ,
+              :s58943 ;
+    :id 8 ;
+    :name "Troll" ;
+    :hasClass :c1 ,
+              :c10 ,
+              :c11 ,
+              :c3 ,
+              :c4 ,
+              :c5 ,
+              :c6 ,
+              :c7 ,
+              :c8 ,
+              :c9 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r9
+:r9 rdf:type owl:NamedIndividual ,
+             :Race ;
+    :hasFaction :horde ;
+    :hasTrait :s69041 ,
+              :s69042 ,
+              :s69044 ,
+              :s69045 ,
+              :s69046 ,
+              :s69070 ;
+    :id 9 ;
+    :name "Goblin" ;
+    :hasClass :c1 ,
+              :c3 ,
+              :c4 ,
+              :c5 ,
+              :c6 ,
+              :c7 ,
+              :c8 ,
+              :c9 .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#rage
+:rage rdf:type owl:NamedIndividual ,
+               :PowerType ;
+      :typeName "Rage" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#runic-power
+:runic-power rdf:type owl:NamedIndividual ,
+                      :PowerType ;
+             :typeName "Runic Power" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s107072
+:s107072 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Your love of food allows you to receive additional stats from eating specialized food" ;
+         :id 107072 ;
+         :name "Epicurean" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s107073
+:s107073 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Pandaren are excellent cooks, and receive a slight increase to their cooking skill" ;
+         :id 107073 ;
+         :name "Gourmand" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s107074
+:s107074 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Your rested experience bonus lasts twice as long" ;
+         :id 107074 ;
+         :name "Inner Peace" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s107076
+:s107076 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Pandaren take less falling dac8 than other races" ;
+         :id 107076 ;
+         :name "Bouncy" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s107079
+:s107079 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Instant" ;
+         :cooldown "2 min" ;
+         :description "Strikes the target with lightning speed, incapacitating them for a short duration" ;
+         :id 107079 ;
+         :name "Quaking Palm" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s109945
+:s109945 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Instant" ;
+         :description "One rather grisly means for the Forsaken to replenish their health is by consuming dead bodies" ;
+         :id 109945 ;
+         :name "Cannibalize" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s154742
+:s154742 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Blood elves possess a preternatural talent for precision and gain a bonus to their critical strike chance" ;
+         :id 154742 ;
+         :name "Arcane Acuity" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s154743
+:s154743 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Tauren are large, able-bodied c1s and gain a bonus to critical strikes" ;
+         :id 154743 ;
+         :name "Brawn" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s154748
+:s154748 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Night elves gain a unique benefit that changes between day and night time" ;
+         :id 154748 ;
+         :name "Touch of Elune" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20549
+:s20549 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "0.5 sec" ;
+        :cooldown "1.5 min" ;
+        :description "Shaking the ground with a mighty stomp of their hooves, tauren can briefly stun enemies" ;
+        :id 20549 ;
+        :name "War Stomp" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20550
+:s20550 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Their exceptional constitution grants the tauren a bonus to their base health" ;
+        :id 20550 ;
+        :name "Endurance" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20551
+:s20551 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Tauren are resistant to Nature magic" ;
+        :id 20551 ;
+        :name "Nature Resistance" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20552
+:s20552 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Tauren receive a skill bonus to herbalism, and they gather herbs faster than most herbalists" ;
+        :id 20552 ;
+        :name "Cultivation" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20555
+:s20555 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Trolls have a natural healing factor that constantly replenishes their health" ;
+        :id 20555 ;
+        :name "Regeneration" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20557
+:s20557 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Trolls hunt with a keen awareness and gain additional experience from killing beasts" ;
+        :id 20557 ;
+        :name "Beast Slaying" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20572
+:s20572 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Instant" ;
+        :cooldown "2 min" ;
+        :description "Orcs can fly into a rage that increases their attack power or intellect (based on class) for a short time." ;
+        :id 20572 ;
+        :name "Blood Fury" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20573
+:s20573 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Rugged by nature, orcs recover from stun effects more quickly than other races." ;
+        :id 20573 ;
+        :name "Hardiness" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20579
+:s20579 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "The Forsaken have a natural resistance to Shadow magic" ;
+        :id 20579 ;
+        :name "Shadow Resistance" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20582
+:s20582 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "The nimble night elves have slightly increased movement speed as well as a minor chance to completely avoid being hit by physical attacks" ;
+        :id 20582 ;
+        :name "Quickness" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20583
+:s20583 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Night elves can resist Nature magic" ;
+        :id 20583 ;
+        :name "Nature Resistance" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20585
+:s20585 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Fallen night elves assume the form of fleet wisp spirits." ;
+        :id 20585 ;
+        :name "Wisp Spirit" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20589
+:s20589 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Instant" ;
+        :cooldown "1 min" ;
+        :description "Gnomes are small and nimble, which allows them to extricate themselves from even the most cunning traps" ;
+        :id 20589 ;
+        :name "Escape Artist" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20592
+:s20592 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Gnomes have a natural resistance to Arcane magic" ;
+        :id 20592 ;
+        :name "Arcane Resistance" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20593
+:s20593 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Their expertise with gizmos, gadgets, and gimmicks provides gnomes with a skill bonus to engineering" ;
+        :id 20593 ;
+        :name "Engineering Specialization" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20594
+:s20594 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Instant" ;
+        :cooldown "2 min" ;
+        :description "Dwarves can temporarily turn to living stone, neutralizing ailments and reducing dac8 taken." ;
+        :id 20594 ;
+        :name "Stoneform" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20596
+:s20596 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Ironforge dwarves have a natural resistance to Frost magic." ;
+        :id 20596 ;
+        :name "Frost Resistance" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20598
+:s20598 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Humans are very adaptable, and get additional bonuses to all secondary stats from all sources." ;
+        :id 20598 ;
+        :name "The Human Spirit" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s20599
+:s20599 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "The straightforward and outspoken humans tend to get along well with other races and gain their trust with relative ease." ;
+        :id 20599 ;
+        :name "Diplomacy" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s227057
+:s227057 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Curious, creative, and brilliant, gnomes receive a small bonus to their resource pool" ;
+         :id 227057 ;
+         :name "Expansive Mind" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s255647
+:s255647 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Instant" ;
+         :cooldown "2.5 min" ;
+         :description "Call down a strike of Holy energy, dealing [Attack power * 3 * 1 * (1 + Versatility)] Holy dac8 to enemies within 5 yards after 3 sec." ;
+         :id 255647 ;
+         :name "Light's Judgment" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s255651
+:s255651 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Reduces Holy dac8 taken by 1%" ;
+         :id 255651 ;
+         :name "Holy Resistance" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s255652
+:s255652 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Erupt with Light upon death. Deals 27409 Holy dac8 to enemies within 8 yards and heals allies for 27409." ;
+         :id 255652 ;
+         :name "Light's Reckoning" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s255653
+:s255653 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Experience gains from killing Demons increased by 20%." ;
+         :id 255653 ;
+         :name "Demonbane" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s255654
+:s255654 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Instant" ;
+         :cooldown "2 min" ;
+         :description "Charge forward for 1 sec, knocking enemies down for 1.5 sec" ;
+         :id 255654 ;
+         :name "Bull Rush" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s255655
+:s255655 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Mining skill increased by 15 and allows you to mine faster" ;
+         :id 255655 ;
+         :name "Pride of Ironhorn" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s255656
+:s255656 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "You have a chance to loot additional meat and fish" ;
+         :id 255656 ;
+         :name "Waste Not, Want Not" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s255658
+:s255658 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Increases your Versatility by 1%" ;
+         :id 255658 ;
+         :name "Mountaineer" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s255659
+:s255659 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Reduces dac8 taken by (Stamina * 0.0003 * 20)" ;
+         :id 255659 ;
+         :name "Rugged Tenacity" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s255661
+:s255661 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "3 sec" ;
+         :cooldown "10 min" ;
+         :description "Conjure up an Eldritch Grimoire, allowing you mail access for 1.5 min" ;
+         :id 255661 ;
+         :name "Cantrips" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s255663
+:s255663 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Inscription skill increased by 15" ;
+         :id 255663 ;
+         :name "Ancient History" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s255664
+:s255664 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Reduces Arcane dac8 taken by 1%" ;
+         :id 255664 ;
+         :name "Arcane Resistance" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s255665
+:s255665 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Increases magical dac8 dealt by 1%." ;
+         :id 255665 ;
+         :name "Magic Affinity" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s255667
+:s255667 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Reduces the cost of Void Storage and Transmogrification by 50%" ;
+         :id 255667 ;
+         :name "Ethereal Connections" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s255668
+:s255668 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Reduces Shadow dac8 taken by 1%" ;
+         :id 255668 ;
+         :name "Chill of Night" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s255669
+:s255669 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Your abilities have a chance to empower you with the essence of the Void, causing your dac8 and healing effects to deal an additional 5% as Shadowfrost for 12 sec" ;
+         :id 255669 ;
+         :name "Entropic Embrace" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s255670
+:s255670 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Your spell casts are not delayed by taking dac8" ;
+         :id 255670 ;
+         :name "Preternatural Calm" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s256948
+:s256948 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Instant" ;
+         :cooldown "3 min" ;
+         :description "Tear a rift in space. Reactivate this ability to teleport through the rift" ;
+         :id 256948 ;
+         :name "Spatial Rift" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s259930
+:s259930 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "2 sec" ;
+         :cooldown "15 min" ;
+         :description "Summon a Forge of Light, enabling Blacksmithing" ;
+         :id 259930 ;
+         :name "Forge of Light" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s260364
+:s260364 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Instant" ;
+         :cooldown "3 min" ;
+         :description "Deals (Attack power * 0.5) Arcane dac8 to nearby enemies and reduces their movement speed by 50%. Lasts 12 sec" ;
+         :id 260364 ;
+         :name "Arcane Pulse" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s26297
+:s26297 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Instant" ;
+        :cooldown "3 min" ;
+        :description "Trolls can launch themselves into a frenzy, and get increased Haste temporarily" ;
+        :id 26297 ;
+        :name "Berserking" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s265221
+:s265221 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Instant" ;
+         :cooldown "2 min" ;
+         :description "Removes all poison, disease, curse, magic, and bleed effects and increases your primary stat by 600 and an additional 200 for each effect removed. Lasts 8 sec" ;
+         :id 265221 ;
+         :name "Fireblood" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s265222
+:s265222 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Increases Blacksmithing skill by 5 and Blacksmithing speed by 25%" ;
+         :id 265222 ;
+         :name "Mass Production" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s265223
+:s265223 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "While indoors, move 4% faster." ;
+         :id 265223 ;
+         :name "Dangeon Delver" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s265224
+:s265224 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Reduces dac8 taken from Physical attacks by 1%." ;
+         :id 265224 ;
+         :name "Forged in Flames" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s265225
+:s265225 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "5 sec" ;
+         :cooldown "30 min" ;
+         :description "While outdoors, summon a Mole Machine that tunnels through the earth." ;
+         :id 265225 ;
+         :name "Mole Machine" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s273216
+:s273216 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Increases mounted speed by 10%." ;
+         :id 273216 ;
+         :name "Open Skies" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s273217
+:s273217 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Increases pet health by 10%." ;
+         :id 273217 ;
+         :name "Sympathetic Vigor" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s273220
+:s273220 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Reduces the duration of Poisons, Diseases, and Curses by 10%." ;
+         :id 273220 ;
+         :name "Savage Blood" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s274738
+:s274738 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Instant" ;
+         :cooldown "2 min" ;
+         :description "Invoke the spirits of your ancestors, granting you a random secondary stat for 15 sec." ;
+         :id 274738 ;
+         :name "Ancestral Call" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s281954
+:s281954 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Instant" ;
+         :cooldown "15 min" ;
+         :description "Reduces your falling speed for 2 min." ;
+         :id 281954 ;
+         :name "Pterrordax Swoop" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s28730
+:s28730 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Instant" ;
+        :cooldown "2 min" ;
+        :description "Blood elves can disrupt magic, removing one beneficial effect from enemies around them and restoring some of their own resources" ;
+        :id 28730 ;
+        :name "Arcane Torrent" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s287712
+:s287712 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "1 sec" ;
+         :cooldown "2.5 min" ;
+         :description "Wind up, then unleash your might upon your foe, dealing [Attack power * 0.75 * 1 * (1 + Versatility)] Physical dac8, stunning for 3 sec, and knocking them back substantially" ;
+         :id 287712 ;
+         :name "Haymaker" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s28875
+:s28875 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "The talented draenei receive a bonus to their jewelcrafting skill" ;
+        :id 28875 ;
+        :name "Gemcutting" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s28877
+:s28877 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Blood elves are skilled in the mystical arts and receive a skill bonus to enchanting" ;
+        :id 28877 ;
+        :name "Arcane Affinity" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s291417
+:s291417 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Reduces Frost and Nature dac8 taken by 1%." ;
+         :id 291417 ;
+         :name "Rime of the Ancient Mariner" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s291442
+:s291442 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Skill in all professions increased by 5" ;
+         :id 291442 ;
+         :name "Jack of All Trades" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s291619
+:s291619 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Increases gold earned from creatures by 2%" ;
+         :id 291619 ;
+         :name "City of Gold" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s291622
+:s291622 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Hold your breath for 50% longer and swim 10% faster" ;
+         :id 291622 ;
+         :name "Child of the Sea" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s291628
+:s291628 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "Passive" ;
+         :description "Increases Versatility by 1%. When you take dac8, heal for 2% of that amount over 4 sec" ;
+         :id 291628 ;
+         :name "Brush It Off" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s291944
+:s291944 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "6 sec" ;
+         :cooldown "2.5 min" ;
+         :description "Regenerate 100% of your maximum health over 6 sec, interrupted by dac8" ;
+         :id 291944 ;
+         :name "Regeneratin'" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s292752
+:s292752 rdf:type owl:NamedIndividual ,
+                  :Spell ;
+         :castTime "3 sec" ;
+         :cooldown "5 days" ;
+         :description "Choose your Loa by making an offering at Loa Shrines around the world. Each Loa offers unique powers. Guards in Dazar'alor will tell you where Shrines can be found." ;
+         :id 292752 ;
+         :name "Embrace of the Loa" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s5227
+:s5227 rdf:type owl:NamedIndividual ,
+                :Spell ;
+       :castTime "Passive" ;
+       :description "The Forsaken can sometimes drain the life from their enemies and use it to repair their own bodies" ;
+       :id 5227 ;
+       :name "Touch of the Grave" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s58943
+:s58943 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Thanks to their impressive legerity, trolls are less affected by movement impairing effects" ;
+        :id 58943 ;
+        :name "Da Voodoo Shuffle" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s58984
+:s58984 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Instant" ;
+        :cooldown "2 min" ;
+        :description "Night Elves can slip into the shadows, awaiting for the right moment to strike." ;
+        :id 58984 ;
+        :name "Shadowmeld" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s59221
+:s59221 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Draenei have a natural resistance to Shadow magic" ;
+        :id 59221 ;
+        :name "Shadow Resistance" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s59224
+:s59224 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Dwarves battle with powerful intent and gain a bonus to critical strikes." ;
+        :id 59224 ;
+        :name "Might of the Mountain" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s59544
+:s59544 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Instant" ;
+        :cooldown "3 min" ;
+        :description "The draenei are blessed with a healing ability that can restore their health and that of their allies" ;
+        :id 59544 ;
+        :name "Gift of the Naaru" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s59752
+:s59752 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Instant" ;
+        :cooldown "3 min" ;
+        :description "Humans can shake off debilitating stun effects." ;
+        :id 59752 ;
+        :name "Every Man for Himself" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s6562
+:s6562 rdf:type owl:NamedIndividual ,
+                :Spell ;
+       :castTime "Passive" ;
+       :description "Confident and strong, draenei receive a slight bonus to their main stat" ;
+       :id 6562 ;
+       :name "Heroic Presence" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s68975
+:s68975 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Worgen fight with the ferocity of an apex predator and have an increased chance to hit with critical strikes" ;
+        :id 68975 ;
+        :name "Viciousness" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s68976
+:s68976 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Worgen have a natural resistance to Shadow and Nature dac8" ;
+        :id 68976 ;
+        :name "Aberration" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s68978
+:s68978 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Worgen claws are extremely sharp and can skin a slain beast rapidly" ;
+        :id 68978 ;
+        :name "Flayer" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s68992
+:s68992 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Instant" ;
+        :cooldown "2 min" ;
+        :description "Activate your true form, drastically increasing movement speed for a short time" ;
+        :id 68992 ;
+        :name "Darkflight" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s68996
+:s68996 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Instant" ;
+        :cooldown "1.5 sec" ;
+        :description "Worgen can shift in and out of Human form while not in combat" ;
+        :id 68996 ;
+        :name "Two Forms" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s69041
+:s69041 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Instant" ;
+        :cooldown "1.5 min" ;
+        :description "The rocket belt can also launch rockets at an enemy, causing fire dac8 to the target" ;
+        :id 69041 ;
+        :name "Rocket Barrage" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s69042
+:s69042 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Goblins cash in on a bonus to haste" ;
+        :id 69042 ;
+        :name "Time is Money" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s69044
+:s69044 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Wheeling and dealing is second nature to goblins, and they get discounts from vendors" ;
+        :id 69044 ;
+        :name "Best Deals Anywhere" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s69045
+:s69045 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Goblins have a natural affinity for hazardous materials and receive a bonus to Alchemy" ;
+        :id 69045 ;
+        :name "Better Living Through Chemistry" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s69046
+:s69046 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Instant" ;
+        :cooldown "30 min" ;
+        :description "Goblins can access their bank vault from anywhere after earning the help of a trusted friend" ;
+        :id 69046 ;
+        :name "Pack Hobgoblin" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s69070
+:s69070 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Instant" ;
+        :cooldown "1.5 min" ;
+        :description "Goblins can use their (relatively) trusty rocket belts to launch themselves over short distances" ;
+        :id 69070 ;
+        :name "Rocket Jump" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s7744
+:s7744 rdf:type owl:NamedIndividual ,
+                :Spell ;
+       :castTime "Instant" ;
+       :cooldown "2 min" ;
+       :description "The Forsaken can shake off any charm, fear and sleep effects at will" ;
+       :id 7744 ;
+       :name "Will of the Forsaken" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s822
+:s822 rdf:type owl:NamedIndividual ,
+               :Spell ;
+      :castTime "Passive" ;
+      :description "Blood elves have a natural resistance to arcane magic spells" ;
+      :id 822 ;
+      :name "Arcane Resistance" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s84116
+:s84116 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Pandaren may choose to align with either the Alliance or the Horde" ;
+        :id 84116 ;
+        :name "Faction Neutral" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s87840
+:s87840 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "1.5 sec" ;
+        :description "Drop to all fours to run as fast as a wild animal. Who needs a mount when you can run?" ;
+        :id 87840 ;
+        :name "Running Wild" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s92680
+:s92680 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Gnomes, while diminutive in stature, are dangerously quick" ;
+        :id 92680 ;
+        :name "Nimble Fingers" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s92682
+:s92682 rdf:type owl:NamedIndividual ,
+                 :Spell ;
+        :castTime "Passive" ;
+        :description "Dwarves receive a skill bonus to archaeology and are able to survey faster than other races." ;
+        :id 92682 ;
+        :name "Explorer" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

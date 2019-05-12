@@ -5,15 +5,15 @@
       "mask": 1,
       "side": "alliance",
       "name": "Human",
-      "classes": ["Death Knight",
-        "Hunter",
-        "Rogue",
-        "Monk",
-        "Mage",
-        "Warlock",
-        "Priest",
-        "Paladin",
-        "Warrior"],
+      "classes": ["c6",
+        "c3",
+        "c4",
+        "c10",
+        "c8",
+        "c9",
+        "c5",
+        "c2",
+        "c1"],
 			"traits": [
         {
           "id": 59752,
@@ -42,14 +42,14 @@
       "side": "horde",
       "name": "Orc",
       "classes": [
-        "Death Knight",
-        "Monk",
-        "Hunter",
-        "Mage",
-        "Rogue",
-        "Warlock",
-        "Shaman",
-        "Warrior"],
+        "c6",
+        "c10",
+        "c3",
+        "c8",
+        "c4",
+        "c9",
+        "c7",
+        "c1"],
 			"traits": [
         {
           "id": 20572,
@@ -73,16 +73,16 @@
       "side": "alliance",
       "name": "Dwarf",
       "classes": [
-        "Death Knight",
-        "Rogue",
-        "Hunter",
-        "Monk",
-        "Mage",
-        "Warlock",
-        "Priest",
-        "Paladin",
-        "Shaman",
-        "Warrior"],
+        "c6",
+        "c4",
+        "c3",
+        "c10",
+        "c8",
+        "c9",
+        "c5",
+        "c2",
+        "c7",
+        "c1"],
 			"traits": [
         {
           "id": 92682,
@@ -105,7 +105,7 @@
         {
           "id": 20594,
           "name": "Stoneform",
-          "description": "Dwarves can temporarily turn to living stone, neutralizing ailments and reducing damage taken.",
+          "description": "Dwarves can temporarily turn to living stone, neutralizing ailments and reducing dac8 taken.",
           "castTime": "Instant",
           "cooldown": "2 min"
         }
@@ -117,15 +117,15 @@
       "side": "alliance",
       "name": "Night Elf",
 			"classes": [
-        "Demon Hunter",
-        "Death Knight",
-        "Druid",
-        "Rogue",
-        "Hunter",
-        "Monk",
-        "Mage",
-        "Priest",
-        "Warrior"],
+        "c12",
+        "c6",
+        "c11",
+        "c4",
+        "c3",
+        "c10",
+        "c8",
+        "c5",
+        "c1"],
 			"traits": [
         {
           "id": 58984,
@@ -166,14 +166,14 @@
       "side": "horde",
       "name": "Undead",
 			"classes": [
-        "Death Knight",
-        "Hunter",
-        "Mage",
-        "Monk",
-        "Priest",
-        "Rogue",
-        "Warlock",
-        "Warrior"],
+        "c6",
+        "c3",
+        "c8",
+        "c10",
+        "c5",
+        "c4",
+        "c9",
+        "c1"],
 			"traits": [
         {
           "id": 7744,
@@ -208,19 +208,19 @@
       "side": "horde",
       "name": "Tauren",
 			"classes": [
-        "Death Knight",
-        "Hunter",
-        "Druid",
-        "Monk",
-        "Priest",
-        "Paladin",
-        "Shaman",
-        "Warrior"],
+        "c6",
+        "c3",
+        "c11",
+        "c10",
+        "c5",
+        "c2",
+        "c7",
+        "c1"],
 			"traits": [
         {
           "id": 154743,
           "name": "Brawn",
-          "description": "Tauren are large, able-bodied warriors and gain a bonus to critical strikes",
+          "description": "Tauren are large, able-bodied c1s and gain a bonus to critical strikes",
           "castTime": "Passive"
         },
         {
@@ -256,14 +256,14 @@
       "side": "alliance",
       "name": "Gnome",
 			"classes": [
-        "Death Knight",
-        "Hunter",
-        "Monk",
-        "Priest",
-        "Warlock",
-        "Warrior",
-        "Mage",
-        "Rogue"],
+        "c6",
+        "c3",
+        "c10",
+        "c5",
+        "c9",
+        "c1",
+        "c8",
+        "c4"],
 			"traits": [
         {
           "id": 20589,
@@ -304,16 +304,16 @@
       "side": "horde",
       "name": "Troll",
 			"classes": [
-        "Death Knight",
-        "Monk",
-        "Hunter",
-        "Druid",
-        "Mage",
-        "Priest",
-        "Rogue",
-        "Warlock",
-        "Shaman",
-        "Warrior"],
+        "c6",
+        "c10",
+        "c3",
+        "c11",
+        "c8",
+        "c5",
+        "c4",
+        "c9",
+        "c7",
+        "c1"],
 			"traits": [
         {
           "id": 26297,
@@ -348,14 +348,14 @@
       "side": "horde",
       "name": "Goblin",
 			"classes": [
-        "Death Knight",
-        "Hunter",
-        "Mage",
-        "Priest",
-        "Rogue",
-        "Warlock",
-        "Shaman",
-        "Warrior"],
+        "c6",
+        "c3",
+        "c8",
+        "c5",
+        "c4",
+        "c9",
+        "c7",
+        "c1"],
 			"traits": [
         {
           "id": 69070,
@@ -367,7 +367,7 @@
         {
           "id": 69041,
           "name": "Rocket Barrage",
-          "description": "The rocket belt can also launch rockets at an enemy, causing fire damage to the target",
+          "description": "The rocket belt can also launch rockets at an enemy, causing fire dac8 to the target",
           "castTime": "Instant",
           "cooldown": "1.5 min"
         },
@@ -404,16 +404,16 @@
       "side": "horde",
       "name": "Blood Elf",
 			"classes": [
-        "Demon Hunter",
-        "Death Knight",
-        "Hunter",
-        "Mage",
-        "Monk",
-        "Paladin",
-        "Priest",
-        "Rogue",
-        "Warlock",
-        "Warrior"],
+        "c12",
+        "c6",
+        "c3",
+        "c8",
+        "c10",
+        "c2",
+        "c5",
+        "c4",
+        "c9",
+        "c1"],
 			"traits": [
         {
           "id": 154742,
@@ -448,14 +448,14 @@
       "side": "alliance",
       "name": "Draenei",
 			"classes": [
-        "Death Knight",
-        "Hunter",
-        "Monk",
-        "Mage",
-        "Priest",
-        "Paladin",
-        "Shaman",
-        "Warrior"],
+        "c6",
+        "c3",
+        "c10",
+        "c8",
+        "c5",
+        "c2",
+        "c7",
+        "c1"],
 			"traits": [
         {
           "id": 59544,
@@ -490,14 +490,14 @@
       "side": "alliance",
       "name": "Worgen",
 			"classes": [
-        "Death Knight",
-        "Druid",
-        "Rogue",
-        "Hunter",
-        "Mage",
-        "Priest",
-        "Warlock",
-        "Warrior"],
+        "c6",
+        "c11",
+        "c4",
+        "c3",
+        "c8",
+        "c5",
+        "c9",
+        "c1"],
 			"traits": [
         {
           "id": 87840,
@@ -508,7 +508,7 @@
         {
           "id": 68976,
           "name": "Aberration",
-          "description": "Worgen have a natural resistance to Shadow and Nature damage",
+          "description": "Worgen have a natural resistance to Shadow and Nature dac8",
           "castTime": "Passive"
         },
         {
@@ -545,13 +545,13 @@
       "side": "neutral",
       "name": "Pandaren",
 			"classes": [
-        "Monk",
-        "Rogue",
-        "Hunter",
-        "Mage",
-        "Priest",
-        "Shaman",
-        "Warrior"],
+        "c10",
+        "c4",
+        "c3",
+        "c8",
+        "c5",
+        "c7",
+        "c1"],
 			"traits": [
         {
           "id": 84116,
@@ -580,7 +580,7 @@
         {
           "id": 107076,
           "name": "Bouncy",
-          "description": "Pandaren take less falling damage than other races",
+          "description": "Pandaren take less falling dac8 than other races",
           "castTime": "Passive"
         },
         {
@@ -598,13 +598,13 @@
       "side": "horde",
       "name": "Nightborne",
 			"classes": [
-        "Hunter",
-        "Mage",
-        "Monk",
-        "Priest",
-        "Rogue",
-        "Warlock",
-        "Warrior"
+        "c3",
+        "c8",
+        "c10",
+        "c5",
+        "c4",
+        "c9",
+        "c1"
       ],
 			"traits": [
         {
@@ -616,7 +616,7 @@
         {
           "id": 255664,
           "name": "Arcane Resistance",
-          "description": "Reduces Arcane damage taken by 1%",
+          "description": "Reduces Arcane dac8 taken by 1%",
           "castTime": "Passive"
         },
         {
@@ -629,14 +629,14 @@
         {
           "id": 260364,
           "name": "Arcane Pulse",
-          "description": "Deals (Attack power * 0.5) Arcane damage to nearby enemies and reduces their movement speed by 50%. Lasts 12 sec",
+          "description": "Deals (Attack power * 0.5) Arcane dac8 to nearby enemies and reduces their movement speed by 50%. Lasts 12 sec",
           "castTime": "Instant",
           "cooldown": "3 min"
         },
         {
           "id": 255665,
           "name": "Magic Affinity",
-          "description": "Increases magical damage dealt by 1%.",
+          "description": "Increases magical dac8 dealt by 1%.",
           "castTime": "Passive"
         }
       ]
@@ -647,11 +647,11 @@
       "side": "horde",
       "name": "Highmountain Tauren",
 			"classes": [
-        "Druid",
-        "Hunter",
-        "Monk",
-        "Shaman",
-        "Warrior"
+        "c11",
+        "c3",
+        "c10",
+        "c7",
+        "c1"
       ],
 			"traits": [
         {
@@ -676,7 +676,7 @@
         {
           "id": 255659,
           "name": "Rugged Tenacity",
-          "description": "Reduces damage taken by (Stamina * 0.0003 * 20)",
+          "description": "Reduces dac8 taken by (Stamina * 0.0003 * 20)",
           "castTime": "Passive"
         },
         {
@@ -693,25 +693,25 @@
       "side": "alliance",
       "name": "Void Elf",
 			"classes": [
-        "Hunter",
-        "Mage",
-        "Monk",
-        "Priest",
-        "Rogue",
-        "Warlock",
-        "Warrior"
+        "c3",
+        "c8",
+        "c10",
+        "c5",
+        "c4",
+        "c9",
+        "c1"
       ],
 			"traits": [
         {
           "id": 255668,
           "name": "Chill of Night",
-          "description": "Reduces Shadow damage taken by 1%",
+          "description": "Reduces Shadow dac8 taken by 1%",
           "castTime": "Passive"
         },
         {
           "id": 255669,
           "name": "Entropic Embrace",
-          "description": "Your abilities have a chance to empower you with the essence of the Void, causing your damage and healing effects to deal an additional 5% as Shadowfrost for 12 sec",
+          "description": "Your abilities have a chance to empower you with the essence of the Void, causing your dac8 and healing effects to deal an additional 5% as Shadowfrost for 12 sec",
           "castTime": "Passive"
         },
         {
@@ -723,7 +723,7 @@
         {
           "id": 255670,
           "name": "Preternatural Calm",
-          "description": "Your spell casts are not delayed by taking damage",
+          "description": "Your spell casts are not delayed by taking dac8",
           "castTime": "Passive"
         },
         {
@@ -741,17 +741,17 @@
       "side": "alliance",
       "name": "Lightforged Draenei",
 			"classes": [
-        "Hunter",
-        "Mage",
-        "Paladin",
-        "Priest",
-        "Warrior"
+        "c3",
+        "c8",
+        "c2",
+        "c5",
+        "c1"
       ],
 			"traits": [
         {
           "id": 255647,
           "name": "Light's Judgment",
-          "description": "Call down a strike of Holy energy, dealing [Attack power * 3 * 1 * (1 + Versatility)] Holy damage to enemies within 5 yards after 3 sec.",
+          "description": "Call down a strike of Holy energy, dealing [Attack power * 3 * 1 * (1 + Versatility)] Holy dac8 to enemies within 5 yards after 3 sec.",
           "castTime": "Instant",
           "cooldown": "2.5 min"       
         },
@@ -771,13 +771,13 @@
         {
           "id": 255652,
           "name": "Light's Reckoning",
-          "description": "Erupt with Light upon death. Deals 27409 Holy damage to enemies within 8 yards and heals allies for 27409.",
+          "description": "Erupt with Light upon death. Deals 27409 Holy dac8 to enemies within 8 yards and heals allies for 27409.",
           "castTime": "Passive"
         },
         {
           "id": 255651,
           "name": "Holy Resistance",
-          "description": "Reduces Holy damage taken by 1%",
+          "description": "Reduces Holy dac8 taken by 1%",
           "castTime": "Passive"
         }
       ]
@@ -788,15 +788,15 @@
       "side": "horde",
       "name": "Zandalari Troll",
 			"classes": [
-        "Warrior",
-        "Paladin",
-        "Hunter",
-        "Rogue",
-        "Priest",
-        "Shaman",
-        "Mage",
-        "Monk",
-        "Druid"
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c7",
+        "c8",
+        "c10",
+        "c11"
       ],
 			"traits": [
         {
@@ -822,7 +822,7 @@
         {
           "id": 291944,
           "name": "Regeneratin'",
-          "description": "Regenerate 100% of your maximum health over 6 sec, interrupted by damage",
+          "description": "Regenerate 100% of your maximum health over 6 sec, interrupted by dac8",
           "castTime": "6 sec",
           "cooldown": "2.5 min"
         }
@@ -834,20 +834,20 @@
       "side": "alliance",
       "name": "Kul Tiran",
 			"classes": [
-        "Warrior",
-        "Hunter",
-        "Rogue",
-        "Priest",
-        "Shaman",
-        "Mage",
-        "Monk",
-        "Druid"
+        "c1",
+        "c3",
+        "c4",
+        "c5",
+        "c7",
+        "c8",
+        "c10",
+        "c11"
       ],
 			"traits": [
         {
           "id": 291628,
           "name": "Brush It Off",
-          "description": "Increases Versatility by 1%. When you take damage, heal for 2% of that amount over 4 sec",
+          "description": "Increases Versatility by 1%. When you take dac8, heal for 2% of that amount over 4 sec",
           "castTime": "Passive"
         },
         {
@@ -859,7 +859,7 @@
         {
           "id": 287712,
           "name": "Haymaker",
-          "description": "Wind up, then unleash your might upon your foe, dealing [Attack power * 0.75 * 1 * (1 + Versatility)] Physical damage, stunning for 3 sec, and knocking them back substantially",
+          "description": "Wind up, then unleash your might upon your foe, dealing [Attack power * 0.75 * 1 * (1 + Versatility)] Physical dac8, stunning for 3 sec, and knocking them back substantially",
           "castTime": "1 sec",
           "cooldown": "2.5 min"
         },
@@ -872,7 +872,7 @@
         {
           "id": 291417,
           "name": "Rime of the Ancient Mariner",
-          "description": "Reduces Frost and Nature damage taken by 1%.",
+          "description": "Reduces Frost and Nature dac8 taken by 1%.",
           "castTime": "Passive"
         }
       ]
@@ -883,15 +883,15 @@
       "side": "alliance",
       "name": "Dark Iron Dwarf",
 			"classes": [
-        "Hunter",
-        "Mage",
-        "Monk",
-        "Paladin",
-        "Priest",
-        "Rogue",
-        "Shaman",
-        "Warrior",
-        "Warlock"
+        "c3",
+        "c8",
+        "c10",
+        "c2",
+        "c5",
+        "c4",
+        "c7",
+        "c1",
+        "c9"
       ],
 			"traits": [
         {
@@ -910,7 +910,7 @@
         {
           "id": 265224,
           "name": "Forged in Flames",
-          "description": "Reduces damage taken from Physical attacks by 1%.",
+          "description": "Reduces dac8 taken from Physical attacks by 1%.",
           "castTime": "Passive"
         },
         {
@@ -934,13 +934,13 @@
       "side": "horde",
       "name": "Mag'har Orc",
 			"classes": [
-        "Hunter",
-        "Mage",
-        "Monk",
-        "Priest",
-        "Rogue",
-        "Shaman",
-        "Warrior"
+        "c3",
+        "c8",
+        "c10",
+        "c5",
+        "c4",
+        "c7",
+        "c1"
       ],
 			"traits": [
         {
