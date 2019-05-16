@@ -1,35 +1,38 @@
 const jsonfile = require('jsonfile')
-const file = 'races.json'
+const file = 'talents.json'
 jsonfile.readFile(file)
   .then(obj => {
-    var races = obj.races;
-    for(i in races){
-      var race = "###  http://prc.di.uminho.pt/2019/worldOfwarcraft#r"+races[i].id+"\n";
-      race += ":r" + races[i].id +" rdf:type owl:NamedIndividual ,\n\t\t\t\t\t:Race ;\n";
-      race += "\t\t:hasFaction :" + races[i].side + " ;\n";
-      for(j in races[i].classes) {
-        race += "\t\t:hasClass :"+ races[i].classes[j] + " ;\n";
-      }
-      for(j in races[i].traits){
-        race += "\t\t:hasTrait :s"+races[i].traits[j].id+" ; \n"
-      }
-      race += '\t\t:id '+races[i].id+' ;\n'
-      race += '\t\t:name "' + races[i].name + '" .\n'
-      console.log(race);
-
-      var spells = races[i].traits
-      for(j in spells){
-        var spell = "###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s" + spells[j].id+"\n";
-        spell += ":s"+spells[j].id +" rdf:type owl:NamedIndividual ,\n\t\t\t\t\t:Spell ;\n";
-        spell += "\t\t:id "+ spells[j].id +" ;\n";
-        spell += '\t\t:description "'+spells[j].description + '" ;\n';
-        spell += '\t\t:castTime "'+spells[j].castTime + '" ;\n';
-        if(spells[j].cooldown)
-          spell += '\t\t:cooldown "'+spells[j].cooldown + '" ;\n';
-        spell += '\t\t:name "'+spells[j].name + '" .\n';
-
-        console.log(spell);
-      }
-    }   
+    for(j in obj) {
+      var wow_class = obj[j]
+      var talents = wow_class.talents
+      for(x in talents){
+        for(y in talents[x]){
+            for(z in talents[x][y]) {
+                var spell = talents[x][y][z].spell
+                var talent = "###  http://prc.di.uminho.pt/2019/worldOfwarcraft#s"+spell.id+"\n";
+                talent += ":s"+spell.id+" rdf:type owl:NamedIndividual ,\n\t\t\t\t\t:Talent ;\n";
+                if(talents[x][y][z].spec) {
+                    var spec = talents[x][y][z].spec
+                    talent += "\t\t:isTalentOf :"+wow_class.class+"Spec"+spec.name.replace(" ","")+" ;\n";
+                } else
+                    talent += "\t\t:isSharedTalentOf :"+wow_class.class+" ;\n"    
+                talent += '\t\t:id '+spell.id+' ;\n';
+                talent += '\t\t:icon "http://media.blizzard.com/wow/icons/56/'+spell.icon+'" ;\n';
+                talent += '\t\t:description "'+spell.description+'" ;\n';
+                talent += '\t\t:castTime "'+spell.castTime+'" ;\n';
+                if(spell.cooldown)
+                    talent += '\t\t:cooldown "'+spell.cooldown+'" ;\n';
+                if(spell.range)
+                    talent += '\t\t:range "'+spell.range+'" ;\n';
+                if(spell.powerCost)
+                    talent += '\t\t:powerCost "'+spell.powerCost+'" ;\n';
+                talent += '\t\t:tier '+talents[x][y][z].tier+' ;\n';
+                talent += '\t\t:column '+talents[x][y][z].column+' ;\n';
+                talent += '\t\t:name "'+spell.name+'" .\n' 
+                console.log(talent);
+            }
+        }
+      }  
+    }
   })
   .catch(error => console.error(error))
