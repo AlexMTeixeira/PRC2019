@@ -10,7 +10,15 @@ jsonfile.readFile(file)
             zone += "\t\trdf:type :Dungeon ;\n";
         if(zones[i].isRaid == true)
             zone += "\t\trdf:type :Raid ;\n";
-        zoen += '\t\t:numPlayers "'+zones[i].numPlayers+'" ;\n';
+        for(j in zones[i].availableModes){
+          if(zones[i].availableModes[j].indexOf("NORMAL") !== -1)
+            zone += '\t\t:hasMode :normal ; \n';
+          if(zones[i].availableModes[j].indexOf("HEROIC") !== -1)
+            zone += '\t\t:hasMode :heroic ; \n';
+          if(zones[i].availableModes[j].indexOf("MYTHIC") !== -1)
+            zone += '\t\t:hasMode :mythic ; \n';
+        }
+        zone += '\t\t:numPlayers "'+zones[i].numPlayers+'" ;\n';
         zone += '\t\t:maxLevel '+zones[i].advisedMaxLevel+' ;\n';
         zone += '\t\t:minLevel '+zones[i].advisedMinLevel+' ;\n';
         zone += '\t\t:floors '+zones[i].floors+' ;\n';
