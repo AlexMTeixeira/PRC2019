@@ -1,0 +1,3 @@
+/node_modules/*
+DataSet/node_modules/*
+**/node_modules/
