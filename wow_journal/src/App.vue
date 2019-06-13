@@ -29,13 +29,13 @@
             @click="goToFaction(item.faction)"
           >
             <v-list-tile-avatar><img :src="require('./assets/'+item.faction+'-symbol.png')" ></v-list-tile-avatar>
-            <v-list-tile-title>{{ item.name }}</v-list-tile-title>
+            <v-list-tile-title :class="item.color+'--text'">{{ item.name }}</v-list-tile-title>
           </v-list-tile>
         </v-list>
       </v-menu>
       <v-divider vertical></v-divider>
       <!-- MENU Races -->
-      <v-menu open-on-hover bottom offset-y>
+      <v-menu dark open-on-hover bottom offset-y>
         <template v-slot:activator="{ on }">
           <v-btn
             dark
@@ -44,18 +44,27 @@
             Races
           </v-btn>
         </template>
-        <v-flex xs-6>
-        <v-list dark >
-          <v-list-tile
-            v-for="(item, index) in races"
-            :key="index"
-            @click="goToRace(item.race)"
-          >
-            <v-list-tile-avatar><img :src="'https://wow.zamimg.com/images/wow/icons/medium/race_'+item.name.replace(/ |'/g,'').toLowerCase().replace('undead','scourge')+'_female.jpg'" ></v-list-tile-avatar>
-            <v-list-tile-title>{{ item.name }}</v-list-tile-title>
-          </v-list-tile>
-        </v-list>
-        </v-flex>
+          <v-list dark >
+            <v-layout grid-list-sm>
+              <v-flex
+               v-for="(fac, index) in factions"
+              :key="index"
+              xs4
+              >
+                <v-sheet :class="fac.color+'--text headline ml-3'">{{fac.name}}</v-sheet>
+                <v-list dark >
+                  <v-list-tile
+                    v-for="(item, index) in fac.races"
+                    :key="index"
+                    @click="goToRace(item.race)"
+                  >
+                    <v-list-tile-avatar><img :src="'https://wow.zamimg.com/images/wow/icons/medium/race_'+item.name.replace(/ |'/g,'').toLowerCase().replace('undead','scourge')+'_female.jpg'" ></v-list-tile-avatar>
+                    <v-list-tile-title>{{ item.name }}</v-list-tile-title>
+                  </v-list-tile>
+                </v-list>
+              </v-flex>
+            </v-layout>
+          </v-list>
       </v-menu>
       <v-divider vertical></v-divider>
       <!-- MENU CLASSES -->
@@ -88,29 +97,6 @@
           >
             Spells
           </v-btn>
-      <v-divider vertical></v-divider>
-      <!-- MENU SPELLS -->
-      <v-menu open-on-hover bottom offset-y>
-        <template v-slot:activator="{ on }">
-          <v-btn
-            dark
-            v-on="on"
-            @click="goToSpells('Mounts')"
-          >
-            Mounts
-          </v-btn>
-        </template>
-
-        <v-list dark >
-          <v-list-tile
-            v-for="(item, index) in mounts"
-            :key="index"
-            @click="goToSpells(item)"
-          >
-            <v-list-tile-title>{{ item }}</v-list-tile-title>
-          </v-list-tile>
-        </v-list>
-      </v-menu>
       <v-divider vertical></v-divider>
       <!-- MENU Zones -->
       <v-menu open-on-hover bottom offset-y>
@@ -154,17 +140,16 @@ const lhost = 'http://localhost:7865'
 
 export default {
   data: () => ({
+    on: false,
     mounts: ['Aquatic', 'Ground', 'Flying'],
     zones: ['Raids', 'Dungeons'],
     factions: [],
-    classes: [],
-    races: []
+    classes: []
   }),
   name: 'WoW-journal',
   mounted: async function () {
     this.loadFactions()
     this.loadClasses()
-    this.loadRaces()
   },
   methods: {
     goToHome: function () {
@@ -192,10 +177,6 @@ export default {
     loadClasses: async function () {
       var response = await axios.get(lhost + '/classes/')
       this.classes = JSON.parse(JSON.stringify(response.data))
-    },
-    loadRaces: async function () {
-      var response = await axios.get(lhost + '/races/')
-      this.races = JSON.parse(JSON.stringify(response.data))
     }
   }
 }

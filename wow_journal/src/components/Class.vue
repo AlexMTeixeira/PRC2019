@@ -15,7 +15,7 @@
                 <v-sheet class="ma-3">
                 <div>
                     <div :class="'display-3 '+color+'--text'">{{name}}</div>
-                    <div class="headline cyan--text text--accent-3">{{power}}</div>
+                    <div :class="'headline '+powerColor+'--text text--accent-3'">{{power}}</div>
                 </div>
                 </v-sheet>
                 <v-card-title primary-title><div class="headline">Specs</div></v-card-title>
@@ -157,6 +157,7 @@ export default {
     spell: {},
     name: '',
     power: '',
+    powerColor: '',
     color: '',
     spec: '',
     specid: '',
@@ -185,6 +186,7 @@ export default {
       this.name = response.data[0].name
       this.color = response.data[0].color
       this.power = response.data[0].power
+      this.powerColor = response.data[0].powerColor
     },
     loadSpecs: async function (id) {
       var response = await axios.get(lhost + '/classes/' + id + '/specs')

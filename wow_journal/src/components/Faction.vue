@@ -14,11 +14,27 @@
             <v-flex xs10>
                 <v-card-title primary-title>
                 <div>
-                    <div class="headline">{{name}}</div>
+                    <div :class="color+'--text headline'">{{name}}</div>
                     <div>{{description}}</div>
                 </div>
                 </v-card-title>
             </v-flex>
+        </v-layout>
+        <v-layout>
+          <v-flex
+            v-for="(item, index) in cities"
+            :key="index"
+            xs4
+          >
+                <v-container fluid>
+                    <v-img ml-2
+                        :src="'https://wow.zamimg.com/images/wow/maps/enus/normal/'+item.city.replace('l','')+'.jpg'"
+                        max-height="325px"
+                        max-width= "488px"
+                    ></v-img>
+                <figcaption class="amber--text text--accent-4">{{item.name}}</figcaption>
+                </v-container>
+          </v-flex>
         </v-layout>
     </v-card>
     <v-divider light></v-divider>
@@ -67,27 +83,36 @@ export default {
   data: () => ({
     description: '',
     name: '',
+    color: '',
+    cities: [],  
     races: []
   }),
   watch: {
     'faction': function () {
       this.loadFaction(this.faction)
+      this.loadCities(this.faction)
       this.loadRaces(this.faction)
     }
   },
   mounted: async function () {
     this.loadFaction(this.faction)
+    this.loadCities(this.faction)
     this.loadRaces(this.faction)
   },
   methods: {
     loadFaction: async function (id) {
       var response = await axios.get(lhost + '/factions/' + id)
       this.name = response.data[0].name
+      this.color = response.data[0].color
       this.description = response.data[0].description
     },
     loadRaces: async function (id) {
       var response = await axios.get(lhost + '/factions/' + id + '/races')
       this.races = JSON.parse(JSON.stringify(response.data))
+    },
+    loadCities: async function (id) {
+      var response = await axios.get(lhost + '/factions/' + id + '/capitals')
+      this.cities = JSON.parse(JSON.stringify(response.data))
     },
     goToRaces: function (id) {
       this.$router.push('/races/' + id)
