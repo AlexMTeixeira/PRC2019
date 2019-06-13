@@ -179,6 +179,10 @@
           rdfs:range xsd:string .
 
 
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#color
+:color rdf:type owl:DatatypeProperty .
+
+
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#column
 :column rdf:type owl:DatatypeProperty ;
         rdfs:domain :Talent ;
@@ -405,6 +409,7 @@
 :c1 rdf:type owl:NamedIndividual ,
              :WoW_Class ;
     :hasPowerType :rage ;
+    :color "brown" ;
     :id 1 ;
     :name "Warrior" .
 
@@ -413,6 +418,7 @@
 :c10 rdf:type owl:NamedIndividual ,
               :WoW_Class ;
      :hasPowerType :energy ;
+     :color "green" ;
      :id 10 ;
      :name "Monk" .
 
@@ -450,6 +456,7 @@
      :hasPowerType :energy ,
                    :focus ,
                    :mana ;
+     :color "deep-orange" ;
      :id 11 ;
      :name "Druid" .
 
@@ -494,6 +501,7 @@
 :c12 rdf:type owl:NamedIndividual ,
               :WoW_Class ;
      :hasPowerType :fury ;
+     :color "purple" ;
      :id 12 ;
      :name "Demon Hunter" .
 
@@ -547,6 +555,7 @@
 :c2 rdf:type owl:NamedIndividual ,
              :WoW_Class ;
     :hasPowerType :mana ;
+    :color "pink" ;
     :id 2 ;
     :name "Paladin" .
 
@@ -582,6 +591,7 @@
 :c3 rdf:type owl:NamedIndividual ,
              :WoW_Class ;
     :hasPowerType :focus ;
+    :color "light-green" ;
     :id 3 ;
     :name "Hunter" .
 
@@ -617,6 +627,7 @@
 :c4 rdf:type owl:NamedIndividual ,
              :WoW_Class ;
     :hasPowerType :energy ;
+    :color "yellow" ;
     :id 4 ;
     :name "Rogue" .
 
@@ -652,6 +663,7 @@
 :c5 rdf:type owl:NamedIndividual ,
              :WoW_Class ;
     :hasPowerType :mana ;
+    :color "white" ;
     :id 5 ;
     :name "Priest" .
 
@@ -687,6 +699,7 @@
 :c6 rdf:type owl:NamedIndividual ,
              :WoW_Class ;
     :hasPowerType :runic-power ;
+    :color "red" ;
     :id 6 ;
     :name "Death Knight" .
 
@@ -722,6 +735,7 @@
 :c7 rdf:type owl:NamedIndividual ,
              :WoW_Class ;
     :hasPowerType :mana ;
+    :color "blue" ;
     :id 7 ;
     :name "Shaman" .
 
@@ -757,6 +771,7 @@
 :c8 rdf:type owl:NamedIndividual ,
              :WoW_Class ;
     :hasPowerType :mana ;
+    :color "cyan" ;
     :id 8 ;
     :name "Mage" .
 
@@ -792,6 +807,7 @@
 :c9 rdf:type owl:NamedIndividual ,
              :WoW_Class ;
     :hasPowerType :mana ;
+    :color "deep-purple" ;
     :id 9 ;
     :name "Warlock" .
 

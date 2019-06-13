@@ -3,11 +3,11 @@
 </template>
 
 <script>
-  import Race from '@/components/Race.vue'
+import Race from '@/components/Race.vue'
 
-  export default {
-    components: {
-      Race
-    }
+export default {
+  components: {
+    Race
   }
+}
 </script>

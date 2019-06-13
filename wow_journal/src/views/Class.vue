@@ -3,11 +3,11 @@
 </template>
 
 <script>
-  import Class from '@/components/Class.vue'
+import Class from '@/components/Class.vue'
 
-  export default {
-    components: {
-      Class
-    }
+export default {
+  components: {
+    Class
   }
+}
 </script>

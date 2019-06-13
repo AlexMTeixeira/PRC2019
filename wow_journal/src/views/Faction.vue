@@ -3,11 +3,11 @@
 </template>
 
 <script>
-  import Faction from '@/components/Faction.vue'
+import Faction from '@/components/Faction.vue'
 
-  export default {
-    components: {
-      Faction
-    }
+export default {
+  components: {
+    Faction
   }
+}
 </script>

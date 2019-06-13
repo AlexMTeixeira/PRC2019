@@ -82,7 +82,7 @@
                 <v-card-text v-if="spell.cooldown !==''" v-text="'Cooldown: '+spell.cooldown"></v-card-text>
                 <v-card-text v-if="spell.powerCost !==''" v-text="'Cost: '+spell.powerCost"></v-card-text>
                 <v-card-text v-if="spell.range !==''" v-text="'Range: '+spell.range"></v-card-text>
-                <v-card-text v-if="spell.type !==''" v-text="'Type: '+spell.type"></v-card-text>            
+                <v-card-text v-if="spell.type !==''" v-text="'Type: '+spell.type"></v-card-text>
             </v-flex>
           </v-card>
         </v-dialog>
@@ -90,92 +90,76 @@
 </template>
 
 <script>
-  import axios from "axios"
+import axios from 'axios'
 
-  const lhost = "http://localhost:7865"
+const lhost = 'http://localhost:7865'
 
-  export default {
-    props: ['tipo'],
-    data: () => ({
-        dialog: false,
-        rowPerPage: [10,25,50,{"text":"$vuetify.dataIterator.rowsPerPageAll","value":-1}],
-        name: "",
-        spell: {},
-        search: "",
-        headers: [
-          {
-            text: "Icon",
-            sortable: false,
-            value: "icon",
-          },
-          {
-            text: "Name",
-            sortable: true,
-            value: "name",
-          },
-          {
-            text: "Description",
-            sortable: false,
-            value: "description",
-          }
-        ],
-        spells: []
-    }),
-    watch: {
-        'tipo': function () {
-          if(this.tipo==='Mounts')
-              this.loadMounts()
-          else if(this.tipo==='Aquatic')
-              this.loadAquatic()
-          else if(this.tipo==='Ground')
-              this.loadGround()
-          else if(this.tipo==='Flying')
-              this.loadFlying()
-          else this.loadSpells()
-        }
+export default {
+  props: ['tipo'],
+  data: () => ({
+    dialog: false,
+    rowPerPage: [10, 25, 50, { 'text': '$vuetify.dataIterator.rowsPerPageAll', 'value': -1 }],
+    name: '',
+    spell: {},
+    search: '',
+    headers: [
+      {
+        text: 'Icon',
+        sortable: false,
+        value: 'icon'
+      },
+      {
+        text: 'Name',
+        sortable: true,
+        value: 'name'
+      },
+      {
+        text: 'Description',
+        sortable: false,
+        value: 'description'
+      }
+    ],
+    spells: []
+  }),
+  watch: {
+    'tipo': function () {
+      if (this.tipo === 'Mounts') { this.loadMounts() } else if (this.tipo === 'Aquatic') { this.loadAquatic() } else if (this.tipo === 'Ground') { this.loadGround() } else if (this.tipo === 'Flying') { this.loadFlying() } else this.loadSpells()
+    }
+  },
+  mounted: async function () {
+    if (this.tipo === 'Mounts') { this.loadMounts() } else if (this.tipo === 'Aquatic') { this.loadAquatic() } else if (this.tipo === 'Ground') { this.loadGround() } else if (this.tipo === 'Flying') { this.loadFlying() } else this.loadSpells()
+  },
+  methods: {
+    loadSpells: async function (id) {
+      var response = await axios.get(lhost + '/spells/')
+      this.spells = JSON.parse(JSON.stringify(response.data))
     },
-    mounted: async function() {
-        if(this.tipo==='Mounts')
-            this.loadMounts()
-        else if(this.tipo==='Aquatic')
-            this.loadAquatic()
-        else if(this.tipo==='Ground')
-            this.loadGround()
-        else if(this.tipo==='Flying')
-            this.loadFlying()
-        else this.loadSpells()
+    loadMounts: async function (id) {
+      var response = await axios.get(lhost + '/spells/mounts')
+      this.spells = JSON.parse(JSON.stringify(response.data))
     },
-    methods: {
-        loadSpells: async function(id) {
-            var response = await axios.get(lhost+"/spells/")
-            this.spells = JSON.parse(JSON.stringify(response.data))
-        },
-        loadMounts: async function(id) {
-            var response = await axios.get(lhost+"/spells/mounts")
-            this.spells = JSON.parse(JSON.stringify(response.data))
-        },
-        loadAquatic: async function(id) {
-            var response = await axios.get(lhost+"/spells/aquatic")
-            this.spells = JSON.parse(JSON.stringify(response.data))
-        },
-        loadGround: async function(id) {
-            var response = await axios.get(lhost+"/spells/ground")
-            this.spells = JSON.parse(JSON.stringify(response.data))
-        },
-        loadFlying: async function(id) {
-            var response = await axios.get(lhost+"/spells/flying")
-            this.spells = JSON.parse(JSON.stringify(response.data))
-        },
-        loadSpell: async function(id) {
-            var response = await axios.get(lhost+"/spells/"+id)
-            this.spell = JSON.parse(JSON.stringify(response.data[0]))
-        },
-        goToSpell: function(id) {
-            this.loadSpell(id)
-            this.dialog = true
-        }
+    loadAquatic: async function (id) {
+      var response = await axios.get(lhost + '/spells/aquatic')
+      this.spells = JSON.parse(JSON.stringify(response.data))
+    },
+    loadGround: async function (id) {
+      var response = await axios.get(lhost + '/spells/ground')
+      this.spells = JSON.parse(JSON.stringify(response.data))
+    },
+    loadFlying: async function (id) {
+      var response = await axios.get(lhost + '/spells/flying')
+      this.spells = JSON.parse(JSON.stringify(response.data))
+    },
+    loadSpell: async function (id) {
+      var response = await axios.get(lhost + '/spells/' + id)
+      this.spell = JSON.parse(JSON.stringify(response.data[0]))
+    },
+    goToSpell: function (id) {
+      this.loadSpell(id)
+      this.dialog = true
     }
   }
+}
 </script>
 
 <style>

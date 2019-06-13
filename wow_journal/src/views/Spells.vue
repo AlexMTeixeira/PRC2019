@@ -3,11 +3,11 @@
 </template>
 
 <script>
-  import Spells from '@/components/Spells.vue'
+import Spells from '@/components/Spells.vue'
 
-  export default {
-    components: {
-      Spells
-    }
+export default {
+  components: {
+    Spells
   }
+}
 </script>

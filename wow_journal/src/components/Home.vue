@@ -4,32 +4,24 @@
       text-xs-center
       wrap
     >
-      <v-flex xs12>
+      <v-flex xs12 mt-5 mr-4>
         <v-img
-          :src="require('../assets/logo_transparent.png')"
-          class="my-3"
+          
+          :src="require('../assets/wow_logo.png')"
           contain
           height="300"
         ></v-img>
       </v-flex>
-
-      <v-flex mb-4>
-        <h1 class="display-2 font-weight-bold mb-3 white--text">
-          Welcome to Wow Journal
-        </h1>
-        
-      </v-flex>
-
-      
     </v-layout>
+
   </v-container>
 </template>
 
 <script>
-  export default {
-    data: () => ({
-    })
-  }
+export default {
+  data: () => ({
+  })
+}
 </script>
 
 <style>

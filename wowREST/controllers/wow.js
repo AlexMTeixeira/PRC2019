@@ -1,18 +1,6 @@
 const endpoint = "http://localhost:7200/repositories/wow-prc-project"
 const axios = require('axios')
 
-async function execQuery2(q) {
-    try {
-        var encoded = encodeURIComponent(q);
-        var response = await axios.get(endpoint + "?query=" + encoded)
-        return(response.data)
-    }
-    catch(error) {
-        return("ERRO: " + error)
-    }
-}
-
-
 async function execQuery(q) {
     try {
         var encoded = encodeURIComponent(q);
@@ -94,6 +82,7 @@ module.exports.traitsRace = (id) => {
         :${id} :hasTrait ?trait .
         ?trait :name ?name ;
                :icon ?icon .
+               OPTIONAL{ ?trait :description ?description .}
     }`
     return execQuery(query)
 }
@@ -111,7 +100,8 @@ module.exports.classesRace = (id) => {
     var query = `PREFIX : <http://prc.di.uminho.pt/2019/worldOfwarcraft#>
     select * where { 
         :${id} :hasWoW_Class ?class.
-        ?class :name ?name
+        ?class :name ?name;
+               :color ?color .
     }`
     return execQuery(query)
 }
@@ -122,7 +112,8 @@ module.exports.listClasses = () => {
     SELECT *
     WHERE {
         ?class a :WoW_Class;
-               :name ?name
+               :name ?name ;
+               :color ?color .
     }`
     return execQuery(query)
 }
@@ -130,8 +121,9 @@ module.exports.listClasses = () => {
 
 module.exports.getClass = (id) => {
     var query = `PREFIX : <http://prc.di.uminho.pt/2019/worldOfwarcraft#>
-    select ?name ?power where { 
+    select * where { 
         :${id} :name ?name ;
+               :color ?color;
             :hasPowerType ?type .
     	?type :typeName ?power .
     }`
@@ -239,6 +231,74 @@ module.exports.getSpell = (id) => {
     return execQuery(query)
 }
 
+//Controller Zones
+module.exports.listZones = () => {
+    var query = `PREFIX : <http://prc.di.uminho.pt/2019/worldOfwarcraft#>
+        select distinct * where { 
+            ?zone a :Zone;
+                :name ?name;
+                :minLevel ?minLevel;
+                :numPlayers ?numPlayers;
+                :isZoneOf ?l.
+            ?l :name ?lname .
+    }`
+    return execQuery(query)
+}
+
+module.exports.listRaids = () => {
+    var query = `PREFIX : <http://prc.di.uminho.pt/2019/worldOfwarcraft#>
+    select distinct * where { 
+        ?zone a :Raid;
+            :name ?name;
+            :minLevel ?minLevel;
+            :numPlayers ?numPlayers;
+            :isZoneOf ?l.
+        ?l :name ?lname .
+    }`
+    return execQuery(query)
+}
+
+module.exports.listDungeons = () => {
+    var query = `PREFIX : <http://prc.di.uminho.pt/2019/worldOfwarcraft#>
+    select distinct * where { 
+        ?zone a :Dungeon;
+            :name ?name;
+            :minLevel ?minLevel;
+            :numPlayers ?numPlayers;
+            :isZoneOf ?l.
+        ?l :name ?lname .
+    }`
+    return execQuery(query)
+}
+
+module.exports.getZone = (id) => {
+    var query = `PREFIX : <http://prc.di.uminho.pt/2019/worldOfwarcraft#>
+    select distinct * where { 
+		:${id} :name ?name;
+         	   :isZoneOf ?l.
+         	?l :name ?lname .
+    OPTIONAL{:${id} :minLevel ?minLevel.}	
+    OPTIONAL{:${id} :maxLevel ?maxLeve . }	
+    OPTIONAL{:${id} :numPlayers ?numPlayers .}	
+    OPTIONAL{:${id} :description ?description .}
+    }`
+    return execQuery(query)
+}
+
+module.exports.test = () => {
+    var query = ``
+    return execQuery(query)
+}
+
+module.exports.test = () => {
+    var query = ``
+    return execQuery(query)
+}
+
+module.exports.test = () => {
+    var query = ``
+    return execQuery(query)
+}
 
 module.exports.test = () => {
     var query = ``
