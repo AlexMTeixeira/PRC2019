@@ -15674,7 +15674,12 @@
             "level": 0,
             "heroicLevel": 0,
             "journalId": 828,
-            "npcs": [],
+            "npcs": [{
+              "id": 68067,
+              "name": "Frost Head",
+              "urlSlug": "frost-head",
+              "creatureDisplayId": 47415
+            }],
             "encounterFaction": -1
           },
           {
@@ -18620,7 +18625,12 @@
             "level": 0,
             "heroicLevel": 0,
             "journalId": 1711,
-            "npcs": [],
+            "npcs": [{
+              "id": 102434,
+              "name": "Phase Spider",
+              "urlSlug": "phase-spider",
+              "creatureDisplayId": 65920
+            }],
             "encounterFaction": -1
           }
         ]
