@@ -132,7 +132,7 @@
             </v-card-title>
         </v-flex>
         <v-flex xs12 ma-2>
-            <v-card-title v-text="spell.name"></v-card-title>
+            <v-card-title class="amber--text text--darken-4" v-text="spell.name"></v-card-title>
             <v-card-text v-if="spell.description !==''" v-text="spell.description"></v-card-text>
             <v-card-text v-if="spell.castTime !==''" v-text="'Cast Time: '+spell.castTime"></v-card-text>
             <v-card-text v-if="spell.cooldown !==''" v-text="'Cooldown: '+spell.cooldown"></v-card-text>

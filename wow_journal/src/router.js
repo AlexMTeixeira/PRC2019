@@ -6,6 +6,7 @@ import Race from './views/Race.vue'
 import Class from './views/Class.vue'
 import Spells from './views/Spells.vue'
 import Zones from './views/Zones.vue'
+import Zone from './views/Zone.vue'
 
 Vue.use(Router)
 
@@ -42,6 +43,11 @@ export default new Router({
       path: '/zones/:tipo',
       name: 'zones',
       component: Zones
+    },
+    {
+      path: '/zone/:mode/:zone',
+      name: 'zone',
+      component: Zone
     }
   ]
 })

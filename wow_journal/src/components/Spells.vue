@@ -19,6 +19,7 @@
             :rows-per-page-items="rowPerPage"
           >
             <template v-slot:items="props">
+              <tr @click="goToSpell(props.item.spell)">
               <td class="text-xs-left">
                 <v-img
                     v-if="props.item.icon!==''"
@@ -37,11 +38,12 @@
                     flat
                 ></v-img>
               </td>
-              <td class="text-xs-left" @click="goToSpell(props.item.spell)">{{ props.item.name }}</td>
+              <td class="text-xs-left amber--text text--darken-1">{{ props.item.name }}</td>
               <td class="text-xs-center">
                 <span v-if="props.item.description!==''">{{ props.item.description }}</span>
                 <span v-else>No Description Available</span>
               </td>
+              </tr>
             </template>
             <template v-slot:no-results>
               <v-alert :value="true" color="error" icon="warning">
@@ -76,7 +78,7 @@
                 </v-card-title>
             </v-flex>
             <v-flex xs12 ma-2>
-                <v-card-title v-text="spell.name"></v-card-title>
+                <v-card-title class="amber--text text--darken-4" v-text="spell.name"></v-card-title>
                 <v-card-text v-if="spell.description !==''" v-text="spell.description"></v-card-text>
                 <v-card-text v-if="spell.castTime !==''" v-text="'Cast Time: '+spell.castTime"></v-card-text>
                 <v-card-text v-if="spell.cooldown !==''" v-text="'Cooldown: '+spell.cooldown"></v-card-text>

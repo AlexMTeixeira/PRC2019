@@ -12,6 +12,13 @@
 #    Object Properties
 #################################################################
 
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#hasCapital
+:hasCapital rdf:type owl:ObjectProperty ;
+            owl:inverseOf :isCapitalOf ;
+            rdfs:domain :Faction ;
+            rdfs:range :Location .
+
+
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#hasFaction
 :hasFaction rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
@@ -95,6 +102,10 @@
          owl:inverseOf :isZoneOf ;
          rdfs:domain :Location ;
          rdfs:range :Zone .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#isCapitalOf
+:isCapitalOf rdf:type owl:ObjectProperty .
 
 
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#isFactionOf
@@ -401,6 +412,10 @@
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#alliance
 :alliance rdf:type owl:NamedIndividual ,
                    :Alliance ;
+          :hasCapital :l1519 ,
+                      :l1537 ,
+                      :l1657 ;
+          :color "blue" ;
           :description "The Alliance, also known as the Grand Alliance, is one of two major political factions of the mortal races in Azeroth, its counterpart being the Horde. The Alliance consists of powerful cultures and groups bound not by desperation or necessity, but by their deep commitments to abstract concepts like nobility and justice, and, striving to represent these high ideals, its many different peoples all contribute their technical, arcane, and spiritual wisdom toward the goal of a just and peaceful world." ;
           :name "Alliance" .
 
@@ -849,18 +864,21 @@
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#energy
 :energy rdf:type owl:NamedIndividual ,
                  :PowerType ;
+        :color "yellow" ;
         :typeName "Energy" .
 
 
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#focus
 :focus rdf:type owl:NamedIndividual ,
                 :PowerType ;
+       :color "brown" ;
        :typeName "Focus" .
 
 
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#fury
 :fury rdf:type owl:NamedIndividual ,
                :PowerType ;
+      :color "purple" ;
       :typeName "Fury" .
 
 
@@ -886,6 +904,10 @@
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#horde
 :horde rdf:type owl:NamedIndividual ,
                 :Horde ;
+       :hasCapital :l1497 ,
+                   :l1637 ,
+                   :l1638 ;
+       :color "red" ;
        :description "The Horde (also called the New Horde, Thrall's Horde or Vol'jin's Horde) is one of the two major political factions of the mortal races in Azeroth, its counterpart being the Alliance. The Horde, a faction led by off-worlders and composed of outsiders has survived these obstacles by bonding together, fighting as family, comrades, or even uneasy allies." ;
        :name "Horde" .
 
@@ -937,6 +959,12 @@
      :name "Durotar" .
 
 
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#l1497
+:l1497 rdf:type owl:NamedIndividual ,
+                :Location ;
+       :name "Undercity" .
+
+
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#l15
 :l15 rdf:type owl:NamedIndividual ,
               :Location ;
@@ -949,10 +977,28 @@
        :name "Stormwind City" .
 
 
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#l1537
+:l1537 rdf:type owl:NamedIndividual ,
+                :Location ;
+       :name "Ironforge" .
+
+
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#l1637
 :l1637 rdf:type owl:NamedIndividual ,
                 :Location ;
        :name "Orgrimmar" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#l1638
+:l1638 rdf:type owl:NamedIndividual ,
+                :Location ;
+       :name "Thunder Bluff" .
+
+
+###  http://prc.di.uminho.pt/2019/worldOfwarcraft#l1657
+:l1657 rdf:type owl:NamedIndividual ,
+                :Location ;
+       :name "Darnassus" .
 
 
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#l17
@@ -1514,6 +1560,7 @@
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#mana
 :mana rdf:type owl:NamedIndividual ,
                :PowerType ;
+      :color "blue" ;
       :typeName "Mana" .
 
 
@@ -9106,6 +9153,7 @@
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#neutral
 :neutral rdf:type owl:NamedIndividual ,
                   :Faction ;
+         :color "yellow" ;
          :description "This faction is neutral, that means, at a certaint point it must deside what with side to battle with" ;
          :name "Neutral" .
 
@@ -9551,12 +9599,14 @@
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#rage
 :rage rdf:type owl:NamedIndividual ,
                :PowerType ;
+      :color "red" ;
       :typeName "Rage" .
 
 
 ###  http://prc.di.uminho.pt/2019/worldOfwarcraft#runic-power
 :runic-power rdf:type owl:NamedIndividual ,
                       :PowerType ;
+             :color "cyan" ;
              :typeName "Runic Power" .
 
 

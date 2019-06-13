@@ -23,4 +23,10 @@ router.get('/:z', async function(req, res, next) {
   res.jsonp(dados)
 })
 
+
+router.get('/:z/bosses', async function(req, res, next) {
+  var dados = await WoW.bossPerZone(req.params.z)
+  res.jsonp(dados)
+})
+
 module.exports = router;

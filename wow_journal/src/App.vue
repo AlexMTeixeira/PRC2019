@@ -98,9 +98,30 @@
             Spells
           </v-btn>
       <v-divider vertical></v-divider>
-      <!-- MENU Zones -->
+      <!-- MENU SPELLS -->
       <v-menu open-on-hover bottom offset-y>
         <template v-slot:activator="{ on }">
+          <v-btn
+            dark
+            v-on="on"
+            @click="goToSpells('Mounts')"
+          >
+            Mounts
+          </v-btn>
+        </template>
+
+        <v-list dark >
+          <v-list-tile
+            v-for="(item, index) in mounts"
+            :key="index"
+            @click="goToSpells(item)"
+          >
+            <v-list-tile-title>{{ item }}</v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+      <v-divider vertical></v-divider>
+      <!-- MENU Zones -->
           <v-btn
             dark
             v-on="on"
@@ -108,31 +129,21 @@
           >
             Zones
           </v-btn>
-        </template>
-
-        <v-list dark >
-          <v-list-tile
-            v-for="(item, index) in zones"
-            :key="index"
-            @click="goToZones(item)"
-          >
-            <v-list-tile-title>{{ item }}</v-list-tile-title>
-          </v-list-tile>
-        </v-list>
-      </v-menu>
     </v-toolbar>
-    <v-img width="100vw" :src="require('./assets/wallpaper.jpg')" gradient="to top left, rgba(100,115,201,.33), rgba(25,32,72,.7)">
-      <v-content>
+      <v-content class="back">
         <router-view />
       </v-content>
-    </v-img>
   </v-app>
 </template>
 
 <style>
-
+.back {
+  background-image: linear-gradient(to top left, rgba(100,115,201,.33), rgba(25,32,72,.7)), url('~@/assets/wallpaper.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 105% 100%; 
+}
 </style>
-
 <script>
 import axios from 'axios'
 

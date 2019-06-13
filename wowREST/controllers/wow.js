@@ -34,6 +34,7 @@ module.exports.listFactions = () => {
     var query = `PREFIX : <http://prc.di.uminho.pt/2019/worldOfwarcraft#>
     select * where { 
         ?faction  a       :Faction ;
+            :color ?color ;
             :name   ?name .
         OPTIONAL{?faction :description ?description}
     }`
@@ -44,6 +45,7 @@ module.exports.getFaction = (id) => {
     var query = `PREFIX : <http://prc.di.uminho.pt/2019/worldOfwarcraft#>
     select * where { 
         :${id} :name ?name ;
+               :color ?color ;
     			  :description ?description .
     }`
     return execQuery(query)
@@ -57,6 +59,16 @@ module.exports.racesPerFaction = (id) => {
     }`
     return execQuery(query)
 }
+
+module.exports.locationsPerFaction = (id) => {
+    var query = `PREFIX : <http://prc.di.uminho.pt/2019/worldOfwarcraft#>
+    select * where { 
+        :${id} :hasCapital ?city.
+        ?city :name ?name .
+    }`
+    return execQuery(query)
+}
+
 
 //Controller Races
 module.exports.listRaces = () => {
@@ -125,7 +137,8 @@ module.exports.getClass = (id) => {
         :${id} :name ?name ;
                :color ?color;
             :hasPowerType ?type .
-    	?type :typeName ?power .
+        ?type :typeName ?power ;
+              :color ?powerColor .
     }`
     return execQuery(query)
 }
@@ -160,12 +173,11 @@ module.exports.talentsPerColumnClass = (id,column) => {
 module.exports.listSpells = () => {
     var query = ` PREFIX : <http://prc.di.uminho.pt/2019/worldOfwarcraft#>
     select distinct ?spell ?name ?icon ?description where { 
-        ?spell a :Spell;
-             rdf:type ?rdf ;  
-             :name ?name .
+    {?spell a :Spell} UNION {?spell a :Trait} 
+        ?spell     :name ?name .
         OPTIONAL{ ?spell :icon ?icon .}
         OPTIONAL{ ?spell :description ?description .}
-    FILTER (?rdf != :Mount)
+        FILTER (NOT EXISTS { ?spell a :Mount . })
     }`
     return execQuery(query)
 }
@@ -277,16 +289,21 @@ module.exports.getZone = (id) => {
 		:${id} :name ?name;
          	   :isZoneOf ?l.
          	?l :name ?lname .
+    OPTIONAL{:${id} :floors ?floors.}
     OPTIONAL{:${id} :minLevel ?minLevel.}	
-    OPTIONAL{:${id} :maxLevel ?maxLeve . }	
+    OPTIONAL{:${id} :maxLevel ?maxLevel . }	
     OPTIONAL{:${id} :numPlayers ?numPlayers .}	
     OPTIONAL{:${id} :description ?description .}
     }`
     return execQuery(query)
 }
 
-module.exports.test = () => {
-    var query = ``
+module.exports.bossPerZone = (id) => {
+    var query = `PREFIX : <http://prc.di.uminho.pt/2019/worldOfwarcraft#>
+    SELECT * WHERE {
+        :${id} :hasNPC ?boss .
+        ?boss  :name ?name .
+    }`
     return execQuery(query)
 }
 
